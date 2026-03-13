@@ -6427,6 +6427,18 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   letter-spacing: 0.01em;
 }
 
+.intro-about.our-story .one-title {
+  width: 100%;
+  text-align: left;
+}
+
+.intro-about.our-story .one-title .title-main {
+  white-space: normal !important;
+  text-align: left;
+  max-width: 100%;
+  word-break: break-word;
+}
+
 .intro-about .intro-content-text h2.intro-tagline {
   font-size: clamp(1rem, 1.8vw, 1.5rem);
   margin-bottom: 28px;
@@ -6548,7 +6560,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 .intro-about .intro-content-text .exper h4 {
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 40px;
 }
 

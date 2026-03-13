@@ -6134,6 +6134,56 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   text-align: left;
 }
 
+.box-seat .pro-text .title-sub-container {
+  padding-left: 34px;
+  margin-bottom: 20px;
+}
+
+.box-seat .pro-text .title-sub-container .title-sub {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 80px;
+}
+
+.box-seat .pro-text .title-sub-container .title-sub:before,
+.box-seat .pro-text .title-sub-container .title-sub:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.box-seat .pro-text .title-sub-container .title-sub:before {
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.box-seat .pro-text .title-sub-container .title-sub:after {
+  left: 15px;
+  height: 1px;
+  width: 52px;
+  background: rgba(233, 233, 233, 0.1);
+}
+
+.v-light .box-seat .pro-text .title-sub-container .title-sub:before {
+  background-color: #000;
+}
+
+.v-light .box-seat .pro-text .title-sub-container .title-sub:after {
+  background-color: #bebebe;
+}
+
 .v-light .box-seat .pro-text p {
   color: #0009;
 }
@@ -6430,6 +6480,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 .intro-about.our-story .one-title {
   width: 100%;
   text-align: left;
+  margin-bottom: 28px;
 }
 
 .intro-about.our-story .one-title .title-main {
@@ -6533,6 +6584,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 .intro-about .intro-content-text p.intro-founded {
   margin-left: 0;
   margin-right: 0;
+  margin-top: 0;
   max-width: 100%;
   width: 100%;
   text-align: left;
@@ -6676,6 +6728,9 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 @media only screen and (max-width: 767px) {
+  .intro-about.our-story .one-title {
+    margin-bottom: 20px;
+  }
   .intro-about .intro-content-text {
     margin-left: 0;
     margin-right: 0;

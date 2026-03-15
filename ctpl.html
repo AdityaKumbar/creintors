@@ -12,7 +12,15 @@
     <link rel="shortcut icon" href="assets/img/companyfavicon.ico" type="image/x-icon" />
     <link rel="icon" href="assets/img/companyfavicon.ico" type="image/x-icon" />
 
-    <link href="assets/css/plugins.css" rel="stylesheet" />
+    <link href="assets/css/plugins/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins/animate.css" rel="stylesheet" />
+    <link href="assets/css/plugins/slick.css" rel="stylesheet" />
+    <link href="assets/css/plugins/swiper.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins/aos.css" rel="stylesheet" />
+    <link href="assets/css/plugins/justifiedGallery.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/plugins/youtubepopup.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
 
     <style>
@@ -301,6 +309,11 @@
             z-index: 1;
         }
 
+        .ctpl-lab-left {
+            display: grid;
+            gap: 12px;
+        }
+
         .ctpl-lab-block {
             border: 1px solid rgba(255, 255, 255, 0.16);
             background: rgba(3, 6, 10, 0.5);
@@ -463,45 +476,80 @@
 </head>
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
     
-    <!-- <div class="preloader">
+    <!-- Preloader -->
+    <div class="preloader">
         <div class="preloader-after"></div>
         <div class="preloader-before"></div>
         <div class="preloader-block">
-            <div class="title">Droow</div>
+            <div class="title">Creintors</div>
             <div class="percent">0</div>
             <div class="loading">loading...</div>
         </div>
-        <div class="preloader-bar"><div class="preloader-progress"></div></div>
-    </div> -->
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div> 
 
+
+
+   <!-- Nav Bar -->
+    
     <div class="dsn-nav-bar">
         <div class="site-header">
             <div class="extend-container">
                 <div class="inner-header">
                     <div class="main-logo">
                         <a href="index.html">
-                            <img class="dark-logo" src="assets/img/Creintorslogo.png" alt="Creintors" />
-                            <img class="light-logo" src="assets/img/Creintorslogo.png" alt="Creintors" />
+                            <img class="dark-logo" src="assets/img/Cweb.png" alt="" />
+                            <img class="light-logo" src="assets/img/Cweb.png" alt="" />
                         </a>
                     </div>
                 </div>
-                <nav class="accent-menu main-navigation">
+
+                <!--Menu -->
+                <nav class=" accent-menu main-navigation">
                     <ul class="extend-container">
+
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="ctpl.html">CTPL</a></li>
-                        <li><a href="ctpl.html">CTPL 2</a></li>
-                        <li><a href="work.html">Industries &amp; Solutions</a></li>
+                        
+                       
+                
+                        <li class="custom-drop-down">
+                            <a href="#">About Us</a>
+                            <ul>
+                                <li><a href="slider.html">Our Story</a></li>
+                                <li><a href="slider2.html">Culture</a></li>
+                                <li><a href="slider3.html">Philosophy</a></li>
+                                <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                <li><a href="founder-profile.html">Founder's Profile</a></li>
+                                <li><a href="certifications.html">Certifications</a></li>
+                                <li><a href="awards-achievements.html">Award & achievements</a></li>
+                                <li><a href="policies.html">Policies</a></li>
+                                <li><a href="3i-ecosystem.html">3I Ecosystem</a></li>
+                            </ul>
+                        </li>
+                        
+
+                        <li><a href="work.html">Industries & Engineered Solutions</a></li>    
+
+
+                       
                         <li><a href="contact.html">Contact</a></li>
+
+
                     </ul>
                 </nav>
             </div>
+       
         </div>
+
+
         <div class="header-top header-top-hamburger">
-            <div class="header-container">
+        <div class="header-container">
                 <div class="logo main-logo">
                     <a href="index.html">
-                        <img class="dark-logo" src="assets/img/Creintorslogo.png" alt="Creintors" />
-                        <img class="light-logo" src="assets/img/Creintorslogo.png" alt="Creintors" />
+                        <img class="dark-logo" src="assets/img/creintorslogo.png" alt="" />
+                        <img class="light-logo" src="assets/img/creintorslogo.png" alt="" />
                     </a>
                 </div>
 
@@ -520,11 +568,20 @@
                     </div>
                 </div>
 
-                <div class="nav"><div class="inner"><div class="nav__content"></div></div></div>
-                <div class="nav-content"><div class="inner-content"><address class="v-middle"><span>Karnataka, India</span><span>Belgaum 590014</span><span>+91-70192 24122</span></address></div></div>
+                <div class="nav">
+                    <div class="inner">
+                        <div class="nav__content">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- End Nav Bar -->
+
+
+
 
     <main class="main-root">
         <div id="dsn-scrollbar">
@@ -619,18 +676,20 @@
                                 <p id="ctpl-lab-tagline" class="ctpl-lab-tagline">High-precision individual test systems for comprehensive valve validation.</p>
                             </div>
                             <div class="ctpl-lab-columns">
-                                <div class="ctpl-lab-block">
-                                    <h5>Product Description</h5>
-                                    <p id="ctpl-lab-description"></p>
+                                <div class="ctpl-lab-left">
+                                    <div class="ctpl-lab-block">
+                                        <h5>Product Description</h5>
+                                        <p id="ctpl-lab-description"></p>
+                                    </div>
+                                    <div class="ctpl-lab-block">
+                                        <h5>Videos</h5>
+                                        <p id="ctpl-lab-videos"></p>
+                                    </div>
                                 </div>
                                 <div class="ctpl-lab-right">
                                     <div class="ctpl-lab-block">
                                         <h5>Specification</h5>
                                         <p id="ctpl-lab-specification"></p>
-                                    </div>
-                                    <div class="ctpl-lab-block">
-                                        <h5>Videos</h5>
-                                        <p id="ctpl-lab-videos"></p>
                                     </div>
                                     <div class="ctpl-lab-block">
                                         <h5>Testimonials</h5>

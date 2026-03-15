@@ -6764,13 +6764,25 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
     margin: 30px 0 0 0;
   }
   .intro-about .img-box .img-cent .img-container {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: auto;
+  }
+  .intro-about .img-box .img-cent .img-container img.intro-main-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: auto;
+    width: 100%;
+    max-height: none;
+    object-fit: contain;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .intro-about .img-box .img-cent .img-container {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: auto;
   }
 }
 
@@ -6793,6 +6805,17 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   .our-services-2 .one-title.divisions-title .title-main,
   .our-services-2 .one-title.divisions-title .division-intro {
     padding-left: 0;
+  }
+  .our-services-2 .one-title.divisions-title .title-main {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+  }
+  .one-title.industries-title .title-main,
+  .one-title.capabilities-title .title-main {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
   }
 }
 

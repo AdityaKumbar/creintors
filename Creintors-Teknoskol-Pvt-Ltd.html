@@ -250,6 +250,95 @@
             font-size: 13px;
             line-height: 1.5;
         }
+        .content-text.product-info-modern {
+            padding: 18px 18px 18px 26px;
+        }
+        .content-text.product-info-modern h3 {
+            margin-bottom: 8px;
+            font-size: 44px;
+            line-height: 1.12;
+            letter-spacing: -0.8px;
+        }
+        .content-text.product-info-modern .product-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 24px;
+        }
+        .content-text.product-info-modern .info-section-title {
+            margin: 0 0 12px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.92);
+        }
+        .product-specs-card {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .product-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .spec-item {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 11px 12px;
+        }
+        .spec-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .spec-icon {
+            width: 16px;
+            height: 16px;
+            color: #97d5ff;
+            flex-shrink: 0;
+        }
+        .spec-label {
+            color: rgba(255, 255, 255, 0.64);
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .spec-value {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.45;
+            font-size: 13.5px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .spec-value.spec-value--highlight {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .use-case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .use-case-tag {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(151, 213, 255, 0.36);
+            background: rgba(151, 213, 255, 0.1);
+            color: rgba(235, 245, 255, 0.95);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: 12px;
+            letter-spacing: 0.2px;
+            font-weight: 600;
+        }
         
         /* Navigation Buttons */
         .slider-project .slider-button-prev,
@@ -344,6 +433,19 @@
             }
             .slider-project .product-image-animated {
                 max-height: 260px !important;
+            }
+            .content-text.product-info-modern {
+                padding: 6px 4px 0;
+            }
+            .content-text.product-info-modern h3 {
+                font-size: 31px;
+            }
+            .content-text.product-info-modern .product-subtitle {
+                font-size: 15px;
+                margin-bottom: 18px;
+            }
+            .product-specs-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -628,7 +730,7 @@
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">About Us</p></div>
-                            <h2 class="title-main">Creintors Teknosol Pvt Ltd</h2>
+                            <h2 class="title-main">Building excellence through precision engineering</h2>
                         </div>
                         <div class="inner">
                             <p data-dsn-animate="up">Creintors Teknosol specializes in engineering high-performance
@@ -642,12 +744,12 @@
                                                     Whether it's for endurance, leakage, burst, or functional testing,
                                                     CTPL delivers more than machines - we deliver confidence.</p>
                         </div>
-                        <!-- <div class="row section-margin" data-dsn-animate="up">
+                        <div class="row section-margin" data-dsn-animate="up">
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">01</span></div><h4>Precision <br> Engineering</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced <br> Testing Systems</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">03</span></div><h4>Industrial <br> Reliability</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">04</span></div><h4>Global <br> Applications</h4></div></div>
-                        </div> -->
+                        </div>
                     </div>
                 </section>
 
@@ -767,26 +869,70 @@
                                         <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
-                                            <h3>Vertical type of Hydrostatic Test Stand</h3>
-                                            <p>VDM 0050 - Two Pillar Test Stand</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>Capacity: 50 MT with Sliding Table</li>
-                                                <li>Application: Steam Trap Valve (Flanged & Swend)</li>
-                                                <li>Size Range: 1/2" to 6"</li>
-                                                <li>Test Pressure: 32 to 400 Bar</li>
-                                                <li>Sealing Type: Face Sealing</li>
-                                                <li>Operation: PLC with Proportional Clamping</li>
-                                                <li>Easy loading & unloading withautomated control</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Valve manufacturers</li>
-                                                <li>Oil and gas industries</li>
-                                                <li>Power plants</li>
-                                                <li>Industrial pipeline systems</li>
-                                            </ul>
+                                        <div class="content-text product-info-modern">
+                                            <h3>Vertical Hydrostatic Test Stand</h3>
+                                            <p class="product-subtitle">VDM 0050 - Two Pillar Test Stand</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 11.5h14v7.25A1.25 1.25 0 0 1 17.75 20H6.25A1.25 1.25 0 0 1 5 18.75V11.5Zm1.5 0V8.75A5.5 5.5 0 0 1 12 3.25a5.5 5.5 0 0 1 5.5 5.5v2.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Capacity</span>
+                                                        </div>
+                                                        <p class="spec-value spec-value--highlight">50 MT with Sliding Table</p>
+                                                    </div>
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.25h16M6.75 10.5h10.5M8.5 14.75h7M10.25 19h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Application</span>
+                                                        </div>
+                                                        <p class="spec-value">Steam Trap Valve (Flanged &amp; Swend)</p>
+                                                    </div>
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16M8 8.5v7M16 8.5v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Size Range</span>
+                                                        </div>
+                                                        <p class="spec-value spec-value--highlight">1/2&quot; to 6&quot;</p>
+                                                    </div>
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.5v7.25l4.25 2.5M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Test Pressure</span>
+                                                        </div>
+                                                        <p class="spec-value spec-value--highlight">32 to 400 Bar</p>
+                                                    </div>
+                                                    <!-- <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c3.4 3.3 5.5 6 5.5 9.1A5.5 5.5 0 1 1 6.5 12.6c0-3.1 2.1-5.8 5.5-9.1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Sealing Type</span>
+                                                        </div>
+                                                        <p class="spec-value">Face Sealing</p>
+                                                    </div> -->
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 13.75h5V18h-5v-4.25Zm6 0h5V18h-5v-4.25Zm6 0h5V18h-5v-4.25ZM3.5 7h17v4.25h-17V7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Operation</span>
+                                                        </div>
+                                                        <p class="spec-value">PLC with Proportional Clamping</p>
+                                                    </div>
+                                                    <div class="spec-item">
+                                                        <div class="spec-head">
+                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 12h10m0 0-2.75-2.75M17 12l-2.75 2.75M6 5h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                                                            <span class="spec-label">Handling</span>
+                                                        </div>
+                                                        <p class="spec-value">Easy loading &amp; unloading with automated control</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Valve manufacturers</span>
+                                                <span class="use-case-tag">Oil and gas industries</span>
+                                                <span class="use-case-tag">Power plants</span>
+                                                <span class="use-case-tag">Industrial pipeline systems</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1019,7 +1165,7 @@
                 <section class="brand-client section-margin">
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
-                            <div class="title-sub-container"><p class="title-sub">Our clients</p></div>
+                            <div class="title-sub-container"><p class="title-sub">Our Proud Associates</p></div>
                             <h2 class="title-main">Trusted Industry Partners</h2>
                         </div>
                         <div class="wapper-client" data-dsn-animate="up">
@@ -1041,7 +1187,7 @@
                 </section>
 
                 <section class="contact-up section-margin section-padding">
-                    <div class="container"><div class="c-wapp"><a href="contact.html" class="effect-ajax"><span class="hiring">Engineering Reliability Starts With Precision Testing</span><span class="career">Contact Our Team</span></a></div></div>
+                    <div class="container"><div class="c-wapp"><a href="contact.html" class="effect-ajax"><span class="hiring">Let's create something impactful, together.</span><span class="career">Contact Our Team</span></a></div></div>
                 </section>
             </div>
             <footer class="footer">

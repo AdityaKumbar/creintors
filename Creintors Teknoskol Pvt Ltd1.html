@@ -13,6 +13,136 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <link href="assets/css/plugins.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+        /* Product Slider Styling */
+        .slider-project .swiper-container {
+            min-height: 650px;
+            height: auto;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .slider-project .swiper-slide {
+            height: auto;
+            min-height: 650px;
+            padding: 20px 0;
+            width: 100% !important;
+        }
+        .slider-project .swiper-wrapper {
+            align-items: center;
+        }
+        .slider-project .swiper-slide .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .slider-project .swiper-slide .col-md-6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slider-project .swiper-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* Content Text Styling */
+        .content-text {
+            padding: 20px 20px;
+        }
+        .content-text h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .content-text p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        .content-text h4 {
+            color: #fff;
+            margin: 20px 0 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .content-text ul {
+            color: rgba(255,255,255,0.85);
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .content-text li {
+            margin-bottom: 6px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        /* Navigation Buttons */
+        .slider-project .slider-button-prev,
+        .slider-project .slider-button-next {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .slider-project .slider-button-prev {
+            left: 20px;
+        }
+        .slider-project .slider-button-next {
+            right: 20px;
+            left: auto;
+        }
+        .slider-project .slider-button-prev div,
+        .slider-project .slider-button-next div {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .slider-project .slider-button-prev:hover div,
+        .slider-project .slider-button-next:hover div {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .slider-project .slider-button-prev svg,
+        .slider-project .slider-button-next svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Pagination */
+        .slider-project .swiper-pagination {
+            bottom: 20px;
+            text-align: center;
+        }
+        .slider-project .swiper-pagination-bullet {
+            background: rgba(255,255,255,0.5);
+        }
+        .slider-project .swiper-pagination-bullet-active {
+            background: rgba(255,255,255,0.9);
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .slider-project .swiper-container {
+                min-height: 500px;
+            }
+            .slider-project .swiper-slide {
+                min-height: 500px;
+                padding: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
 
@@ -280,13 +410,15 @@
 
 
 
-                <div class="container section-margin">
+                
+
+                <div class="container slider-project section-margin">
+                    <div class="container section-margin">
                     <div class="one-title" data-dsn-animate="up">
                         <h2 class="title-main" id="products">Our Products</h2>
                     </div>
                 </div>
-
-                <div class="container-fluid slider-project section-margin">
+                    
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <!-- Product 1: Single Station Test Rig -->

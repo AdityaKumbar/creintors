@@ -3933,7 +3933,7 @@ body.nav-active .header-top .header-container .menu-icon:hover .text-menu .text-
 .title-subtitle {
   display: inline-block;
   font-size: 0.45em;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.03em;
   opacity: 0.9;
   margin-top: 30px;
@@ -10626,11 +10626,11 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 .dsn-slider-content .slide-content .slide-content-inner p {
-  max-width: 470px;
+  max-width: 600px;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   margin-top: 30px;
 }
 
@@ -13174,5 +13174,455 @@ footer .copyright-social ul li:last-child {
 .v-light .caption {
   color: #000;
 }
+/* CTPL page styles */
+:root {
+            --ctpl-blue: #2796c9;
+            --ctpl-panel: rgba(10, 15, 24, 0.82);
+            --ctpl-border: rgba(255, 255, 255, 0.14);
+        }
+
+        .ctpl-hero .bg-image[data-overlay]:before {
+            background: linear-gradient(130deg, rgba(0, 0, 0, 0.9), rgba(6, 16, 28, 0.78));
+        }
+
+        .ctpl-hero .project-title .title-text-header-inner span.brand-blue {
+            color: var(--ctpl-blue);
+        }
+
+        .ctpl-chip {
+            border: 1px solid var(--ctpl-blue);
+            color: #cfefff;
+            background: rgba(39, 150, 201, 0.16);
+            padding: 2px 8px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .ctpl-card {
+            border: 1px solid var(--ctpl-border);
+            background: var(--ctpl-panel);
+            padding: 24px;
+        }
+
+        .ctpl-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .ctpl-kpis {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .ctpl-kpi {
+            border: 1px solid var(--ctpl-border);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 14px;
+            text-align: center;
+        }
+
+        .ctpl-kpi strong {
+            display: block;
+            font-size: 26px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .ctpl-kpi span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .ctpl-message {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            border: 1px solid var(--ctpl-border);
+            background: var(--ctpl-panel);
+            overflow: hidden;
+        }
+
+        .ctpl-message-content {
+            padding: 42px 36px;
+            background: linear-gradient(150deg, rgba(5, 10, 18, 0.92), rgba(10, 18, 30, 0.86));
+            color: #f4f7fb;
+        }
+
+        .ctpl-message-content h3 {
+            margin-bottom: 20px;
+            font-size: 48px;
+            line-height: 1;
+            color: var(--ctpl-blue);
+            font-weight: 800;
+        }
+
+        .ctpl-message-heading {
+            margin: -8px 0 18px;
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            color: var(--ctpl-blue);
+            text-transform: none;
+        }
+
+        .ctpl-message-content .quote-text {
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .ctpl-message-signature strong {
+            display: block;
+            font-size: 30px;
+            line-height: 1;
+            color: var(--ctpl-blue);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .ctpl-message-signature span {
+            font-size: 18px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .ctpl-message-visual {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .ctpl-message-placeholder {
+            width: 100%;
+            max-width: 360px;
+            min-height: 440px;
+            border: 2px dashed rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .ctpl-message-photo {
+            width: 100%;
+            max-width: 360px;
+            max-height: 520px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .ctpl-products-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--ctpl-border);
+            background: var(--ctpl-panel);
+        }
+
+        .ctpl-products-table {
+            width: 100%;
+            min-width: 920px;
+            border-collapse: collapse;
+        }
+
+        .ctpl-products-table th,
+        .ctpl-products-table td {
+            border: 1px solid var(--ctpl-border);
+            padding: 12px 10px;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .ctpl-products-table th {
+            background: rgba(39, 150, 201, 0.33);
+            color: #fff;
+            font-size: 17px;
+            min-width: 120px;
+        }
+
+        .ctpl-products-table td a {
+            color: rgba(255, 255, 255, 0.87);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.28);
+            padding-bottom: 2px;
+        }
+
+        .ctpl-products-table td a.active {
+            color: #fff;
+            border-bottom-color: var(--ctpl-blue);
+        }
+
+        .ctpl-product-detail,
+        .ctpl-subtabs,
+        .ctpl-panel {
+            display: none !important;
+        }
+
+        .ctpl-clients {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .ctpl-client {
+            border: 1px solid var(--ctpl-border);
+            background: rgba(255, 255, 255, 0.03);
+            text-align: center;
+            padding: 16px 10px;
+            font-size: 13px;
+        }
+
+        .ctpl-products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .ctpl-products-lab {
+            border: 1px solid var(--ctpl-border);
+            background: radial-gradient(circle at 12% 20%, rgba(39, 150, 201, 0.22), rgba(4, 7, 12, 0.9) 55%);
+            overflow: hidden;
+        }
+
+        .ctpl-lab-stage {
+            position: relative;
+            padding: 34px 28px 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .ctpl-lab-stage::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(39, 150, 201, 0.18);
+            filter: blur(8px);
+            pointer-events: none;
+        }
+
+        .ctpl-lab-head {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 22px;
+        }
+
+        .ctpl-lab-category {
+            display: inline-block;
+            border: 1px solid rgba(39, 150, 201, 0.55);
+            background: rgba(39, 150, 201, 0.14);
+            padding: 5px 10px;
+            font-size: 11px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: rgba(230, 247, 255, 0.96);
+            margin-bottom: 10px;
+        }
+
+        .ctpl-lab-title {
+            font-size: 52px;
+            line-height: 1.08;
+            color: #fff;
+            margin-bottom: 12px;
+            font-weight: 800;
+            max-width: 760px;
+        }
+
+        .ctpl-lab-tagline {
+            max-width: 760px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .ctpl-lab-columns {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ctpl-lab-left {
+            display: grid;
+            gap: 12px;
+        }
+
+        .ctpl-lab-block {
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(3, 6, 10, 0.5);
+            padding: 14px 14px 12px;
+        }
+
+        .ctpl-lab-block h5 {
+            margin: 0 0 8px;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: rgba(167, 221, 245, 0.95);
+        }
+
+        .ctpl-lab-block p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .ctpl-lab-block ul {
+            margin: 0;
+            padding-left: 17px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .ctpl-lab-right {
+            display: grid;
+            gap: 12px;
+        }
+
+        .ctpl-lab-nav {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 0;
+        }
+
+        .ctpl-lab-item {
+            border: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.45);
+            text-align: left;
+            padding: 14px 10px 12px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.74);
+            min-height: 88px;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .ctpl-lab-item:last-child {
+            border-right: none;
+        }
+
+        .ctpl-lab-item span {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.85;
+        }
+
+        .ctpl-lab-item strong {
+            display: block;
+            font-size: 14px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .ctpl-lab-item.active {
+            background: linear-gradient(140deg, rgba(17, 52, 72, 0.96), rgba(10, 18, 27, 0.96));
+            color: #fff;
+            box-shadow: inset 0 3px 0 rgba(39, 150, 201, 0.95);
+        }
+
+        @media only screen and (max-width: 980px) {
+            .ctpl-products-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .ctpl-kpis {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ctpl-clients {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .ctpl-message {
+                grid-template-columns: 1fr;
+            }
+
+            .ctpl-message-content {
+                padding: 28px 20px;
+            }
+
+            .ctpl-message-content h3 {
+                font-size: 34px;
+            }
+
+            .ctpl-message-signature strong {
+                font-size: 24px;
+            }
+
+            .ctpl-message-signature span {
+                font-size: 16px;
+            }
+
+            .ctpl-message-placeholder {
+                max-width: 100%;
+                min-height: 320px;
+            }
+
+            .ctpl-message-photo {
+                max-width: 100%;
+                max-height: 420px;
+            }
+
+            .ctpl-lab-title {
+                font-size: 36px;
+            }
+
+            .ctpl-lab-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .ctpl-lab-nav {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media only screen and (max-width: 620px) {
+            .ctpl-kpis,
+            .ctpl-clients,
+            .ctpl-products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ctpl-lab-stage {
+                padding: 24px 16px 16px;
+            }
+
+            .ctpl-lab-title {
+                font-size: 28px;
+            }
+
+            .ctpl-lab-tagline,
+            .ctpl-lab-block p,
+            .ctpl-lab-block ul {
+                font-size: 13px;
+            }
+
+            .ctpl-lab-nav {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
 /*# sourceMappingURL=style.css.map */
+

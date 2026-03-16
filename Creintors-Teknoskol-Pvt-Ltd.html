@@ -104,6 +104,119 @@
             height: auto;
             object-fit: cover;
         }
+        .slider-project .product-image-panel {
+            background: #050505 !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            padding: 24px !important;
+            min-height: 430px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: default !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        .slider-project .product-image-panel::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: -20% !important;
+            background: url('assets/img/globalpresence.png') center / 120% auto no-repeat !important;
+            opacity: 0.2 !important;
+            animation: product-bg-drift-force 10s ease-in-out infinite alternate !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+        .slider-project .product-image-panel::after {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.62) 50%, rgba(5, 5, 5, 0.82)) !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+        .slider-project .product-image-animated {
+            width: 100% !important;
+            max-height: 380px !important;
+            object-fit: contain !important;
+            position: relative !important;
+            z-index: 2 !important;
+            animation: none !important;
+            transition: transform 0.35s ease, filter 0.35s ease !important;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child img {
+            animation: none !important;
+            transform: none;
+        }
+        .slider-project .product-image-panel:hover .product-image-animated {
+            transform: scale(1.04) !important;
+            filter: brightness(1.05) !important;
+        }
+        @keyframes product-bg-drift-force {
+            0% { transform: translateX(-10%); }
+            100% { transform: translateX(10%); }
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child {
+            background: #050505;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background: url('assets/img/globalpresence.png') center / 120% auto no-repeat;
+            opacity: 0.2;
+            animation: product-bg-drift 10s ease-in-out infinite alternate;
+            z-index: 1;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.62) 50%, rgba(5, 5, 5, 0.82));
+            z-index: 1;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            transition: transform 0.35s ease, filter 0.35s ease;
+            position: relative;
+            z-index: 2;
+            animation: product-image-drift 7s ease-in-out infinite alternate;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child:hover img {
+            animation-play-state: paused;
+            transform: scale(1.04);
+            filter: brightness(1.05);
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child:hover::before {
+            animation-play-state: paused;
+            transform: translateX(0) scale(1.03);
+        }
+        @keyframes product-bg-drift {
+            0% {
+                transform: translateX(-10%);
+            }
+            100% {
+                transform: translateX(10%);
+            }
+        }
+        @keyframes product-image-drift {
+            0% {
+                transform: translateX(-2%);
+            }
+            100% {
+                transform: translateX(2%);
+            }
+        }
         
         /* Content Text Styling */
         .content-text {
@@ -195,7 +308,7 @@
             background: rgba(255,255,255,0.9);
         }
         
-                @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             .slider-project .swiper-container {
                 min-height: 0;
             }
@@ -223,6 +336,14 @@
             .slider-project.section-margin {
                 margin-top: 16px;
                 margin-bottom: 24px;
+            }
+            .slider-project .product-image-panel {
+                min-height: 300px !important;
+                padding: 16px !important;
+                margin-bottom: 20px !important;
+            }
+            .slider-project .product-image-animated {
+                max-height: 260px !important;
             }
         }
 
@@ -642,8 +763,8 @@
                             <!-- Product 1: Single Station Test Rig -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -674,8 +795,8 @@
                             <!-- Product 2: Multi Station Test Rig -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product2.png" alt="Multi Station Test Rig" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product2.png" alt="Multi Station Test Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -704,8 +825,8 @@
                             <!-- Product 3: Torque Rig -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product8.png" alt="Torque Rig" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product8.png" alt="Torque Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -732,8 +853,8 @@
                             <!-- Product 4: Landing Gear Test Rig -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product4.png" alt="Landing Gear Test Rig" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product4.png" alt="Landing Gear Test Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -760,8 +881,8 @@
                             <!-- Product 5: Flanged Valves Test Rig -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product5.png" alt="Flanged Valves Test Rig" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product5.png" alt="Flanged Valves Test Rig" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -789,8 +910,8 @@
                             <!-- Product 6: Loops / Simulations -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product6.png" alt="Loops / Simulations" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product6.png" alt="Loops / Simulations" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">
@@ -817,8 +938,8 @@
                             <!-- Product 7: Steel Mill Parts -->
                             <div class="swiper-slide">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="assets/img/product7.png" alt="Steel Mill Parts" class="img-fluid">
+                                    <div class="col-md-6 product-image-panel">
+                                        <img src="assets/img/product7.png" alt="Steel Mill Parts" class="img-fluid product-image-animated">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text">

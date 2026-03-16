@@ -48,6 +48,30 @@
             height: auto;
             object-fit: cover;
         }
+
+        /* Ensure capability cards match other pages (fixed height + bottom-aligned text) */
+        .our-news .item-new {
+            min-height: 460px;
+        }
+        .our-news .item-new .image {
+            height: 280px;
+            overflow: hidden;
+        }
+        .our-news .item-new .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .our-news .item-new .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            padding: 40px;
+            box-sizing: border-box;
+        }
         
         /* Content Text Styling */
         .content-text {
@@ -305,12 +329,12 @@
                         <div class="inner">
                             <p data-dsn-animate="up">Creintors Teknosol Private Limited (CTPL) is the precision engineering division of the Creintors Group, focused on designing and manufacturing advanced industrial testing systems and special purpose engineering equipment. Our expertise lies in developing reliable valve testing systems, simulation loops, and specialized industrial rigs that enable industries to test and validate critical components under real operational conditions. With a strong focus on engineering precision, reliability, and performance, CTPL delivers testing solutions that support industries such as energy, heavy engineering, manufacturing, and process industries. Our systems are designed to ensure that valves and components meet strict operational standards before deployment in real world industrial environments. Through innovative engineering and high quality manufacturing, we help industries improve safety, performance validation, and long term operational reliability.</p>
                         </div>
-                        <div class="row section-margin" data-dsn-animate="up">
+                        <!-- <div class="row section-margin" data-dsn-animate="up">
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">01</span></div><h4>Precision <br> Engineering</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced <br> Testing Systems</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">03</span></div><h4>Industrial <br> Reliability</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">04</span></div><h4>Global <br> Applications</h4></div></div>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
 
@@ -318,9 +342,8 @@
                     <div class="container">
                         <div class="one-title capabilities-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">WE TEST WHAT MATTERS MOST</p></div>
-                            <h2 class="title-main">We Test What Matters Most</h2>
-                            <p>From safety valves to pump casings, our test rigs verify integrity, leakage performance, endurance, and automation readiness before every deployment.</p>
-                        </div>
+                            <h2 class="title-main">Industrial Testing Expertise</h2>
+                            </div>
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
@@ -671,15 +694,20 @@
                             <div class="title-sub-container"><p class="title-sub">Our clients</p></div>
                             <h2 class="title-main">Trusted Industry Partners</h2>
                         </div>
-                        <div class="wapper-client">
-                            <div class="logo-box"><img src="assets/img/logo/TVSLogo-hr.svg" alt="TVS" style="width: 200px; height: auto;"></div>
-                            <div class="logo-box"><img src="assets/img/logo/2017-logo-Tata-Motors.jpg.jpeg" alt="Tata Motors"></div>
+                        <div class="wapper-client" data-dsn-animate="up">
                             <div class="logo-box"><img src="assets/img/logo/npcil_logo.png" alt="NPCIL"></div>
-                            <div class="logo-box"><img src="assets/img/logo/tanishq-logo.jpg.jpeg" alt="Tanishq" style="max-width: 250px !important; width: 250px !important; height: auto;"></div>
-                            <div class="logo-box"><img src="assets/img/logo/VEGA_NEW_LOGO.avif" alt="Vega"></div>
-                            <div class="logo-box"><img src="assets/img/logo/technova-logo.jpg.jpeg" alt="Technova" style="width: 200px; height: auto;"></div>
                             <div class="logo-box"><img src="assets/img/logo/flowserve_logo.png" alt="Flowserve"></div>
                             <div class="logo-box"><img src="assets/img/logo/L&T.png" alt="L&T" style="max-width: 150px !important; width: 150px !important; height: auto;"></div>
+                            <div class="logo-box"><img src="assets/img/logo/azbil_logo-removebg-preview.png" alt="Azbil"></div>
+                            <div class="logo-box"><img src="assets/img/logo/EmersonElectricLogo.png" alt="Emerson Electric"></div>
+                            <div class="logo-box"><img src="assets/img/logo/Essar logo.png" alt="Essar"></div>
+                            <div class="logo-box"><img src="assets/img/logo/festo logo.png" alt="Festo"></div>
+                            <div class="logo-box"><img src="assets/img/logo/grab logo.png" alt="Grab"></div>
+                            <div class="logo-box"><img src="assets/img/logo/shalimar logo.jpg" alt="Shalimar"></div>
+                            <div class="logo-box"><img src="assets/img/logo/valtech logo.png" alt="Valtech"></div>
+                            <div class="logo-box"><img src="assets/img/logo/wire.png" alt="Wire"></div>
+                            <div class="logo-box"><img src="assets/img/logo/GWC-logo.png" alt="GWC"></div>
+
                         </div>
                     </div>
                 </section>

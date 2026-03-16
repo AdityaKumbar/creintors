@@ -117,22 +117,23 @@
             overflow: hidden !important;
         }
         .slider-project .product-image-panel::before {
-            content: "" !important;
-            position: absolute !important;
-            inset: -20% !important;
-            background: url('assets/img/globalpresence.png') center / 120% auto no-repeat !important;
-            opacity: 0.2 !important;
-            animation: product-bg-drift-force 10s ease-in-out infinite alternate !important;
-            z-index: 1 !important;
-            pointer-events: none !important;
+            content: none !important;
         }
         .slider-project .product-image-panel::after {
             content: "" !important;
             position: absolute !important;
             inset: 0 !important;
-            background: linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.62) 50%, rgba(5, 5, 5, 0.82)) !important;
+            background:
+                linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.62) 50%, rgba(5, 5, 5, 0.82)),
+                linear-gradient(110deg, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0) 72%) !important;
+            background-size: 100% 100%, 170% 100% !important;
+            background-position: 0 0, 0 0 !important;
+            transform: translateX(-165%);
             z-index: 1 !important;
             pointer-events: none !important;
+        }
+        .slider-project .product-image-panel:hover::after {
+            animation: product-image-sweep-ltr 1.25s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
         }
         .slider-project .product-image-animated {
             width: 100% !important;
@@ -141,15 +142,23 @@
             position: relative !important;
             z-index: 2 !important;
             animation: none !important;
-            transition: transform 0.35s ease, filter 0.35s ease !important;
+            transition: transform 0.45s ease, filter 0.35s ease !important;
         }
         .slider-project .swiper-slide .row > .col-md-6:first-child img {
             animation: none !important;
             transform: none;
         }
         .slider-project .product-image-panel:hover .product-image-animated {
-            transform: scale(1.04) !important;
-            filter: brightness(1.05) !important;
+            transform: scale(1.035) !important;
+            filter: brightness(1.08) !important;
+        }
+        @keyframes product-image-sweep-ltr {
+            0% {
+                transform: translateX(-165%);
+            }
+            100% {
+                transform: translateX(165%);
+            }
         }
         @keyframes product-bg-drift-force {
             0% { transform: translateX(-10%); }
@@ -168,13 +177,7 @@
             overflow: hidden;
         }
         .slider-project .swiper-slide .row > .col-md-6:first-child::before {
-            content: "";
-            position: absolute;
-            inset: -20%;
-            background: url('assets/img/globalpresence.png') center / 120% auto no-repeat;
-            opacity: 0.2;
-            animation: product-bg-drift 10s ease-in-out infinite alternate;
-            z-index: 1;
+            content: none;
         }
         .slider-project .swiper-slide .row > .col-md-6:first-child::after {
             content: "";
@@ -190,16 +193,14 @@
             transition: transform 0.35s ease, filter 0.35s ease;
             position: relative;
             z-index: 2;
-            animation: product-image-drift 7s ease-in-out infinite alternate;
+            animation: none;
         }
         .slider-project .swiper-slide .row > .col-md-6:first-child:hover img {
-            animation-play-state: paused;
-            transform: scale(1.04);
-            filter: brightness(1.05);
+            transform: scale(1.035);
+            filter: brightness(1.08);
         }
         .slider-project .swiper-slide .row > .col-md-6:first-child:hover::before {
-            animation-play-state: paused;
-            transform: translateX(0) scale(1.03);
+            transform: none;
         }
         @keyframes product-bg-drift {
             0% {
@@ -253,6 +254,50 @@
         .content-text.product-info-modern {
             padding: 18px 18px 18px 26px;
         }
+        .slider-project .swiper-slide.product-slide-featured .row {
+            align-items: flex-start;
+        }
+        .slider-project .swiper-slide.product-slide-featured .row > .col-md-6:first-child {
+            background: transparent;
+            border: 0;
+            padding: 0;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: visible;
+        }
+        .slider-project .swiper-slide.product-slide-featured .row > .col-md-6:first-child::before,
+        .slider-project .swiper-slide.product-slide-featured .row > .col-md-6:first-child::after {
+            content: none;
+        }
+        .slider-project .swiper-slide.product-slide-featured .product-image-panel {
+            min-height: 0 !important;
+            aspect-ratio: 4 / 3;
+            padding: 12px !important;
+        }
+        .slider-project .swiper-slide.product-slide-featured .product-image-animated {
+            width: 100% !important;
+            height: 100% !important;
+            max-height: none !important;
+            object-fit: contain !important;
+            transform: scale(1.16);
+            transform-origin: center;
+        }
+        .slider-project .swiper-slide.product-slide-featured .content-text.product-info-modern {
+            padding-top: 0;
+        }
+        .slider-project .swiper-slide.product-slide-featured .product-image-col {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .slider-project .swiper-slide.product-slide-featured .image-side-usecases {
+            padding: 0 2px 6px;
+        }
+        .slider-project .swiper-slide.product-slide-featured .image-side-usecases .info-section-title {
+            margin-bottom: 10px;
+        }
         .content-text.product-info-modern h3 {
             margin-bottom: 8px;
             font-size: 44px;
@@ -275,8 +320,8 @@
             color: rgba(255, 255, 255, 0.92);
         }
         .product-specs-card {
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008));
             border-radius: 14px;
             padding: 16px;
             margin-bottom: 24px;
@@ -287,9 +332,9 @@
             gap: 10px;
         }
         .spec-item {
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.09);
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.01);
             padding: 11px 12px;
         }
         .spec-head {
@@ -301,7 +346,7 @@
         .spec-icon {
             width: 16px;
             height: 16px;
-            color: #97d5ff;
+            color: rgba(255, 255, 255, 0.8);
             flex-shrink: 0;
         }
         .spec-label {
@@ -330,14 +375,73 @@
         .use-case-tag {
             display: inline-flex;
             align-items: center;
-            border: 1px solid rgba(151, 213, 255, 0.36);
-            background: rgba(151, 213, 255, 0.1);
-            color: rgba(235, 245, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.9);
             border-radius: 999px;
             padding: 7px 14px;
             font-size: 12px;
             letter-spacing: 0.2px;
             font-weight: 600;
+            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        .use-case-tag:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+        }
+        .our-story .row.section-margin .exper {
+            position: relative;
+            overflow: hidden;
+            border: 0;
+            border-radius: 0;
+            padding: 8px 0;
+            background: transparent;
+            transition: color 0.3s ease;
+        }
+        .our-story .row.section-margin .exper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 75%);
+            transform: translateX(-130%);
+            pointer-events: none;
+        }
+        .our-story .row.section-margin .exper > * {
+            position: relative;
+            z-index: 1;
+        }
+        .our-story .row.section-margin .exper:hover::before,
+        .our-story .row.section-margin .exper:focus-within::before {
+            animation: feature-sweep-ltr 1.35s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
+        }
+        .our-story .row.section-margin .exper:hover,
+        .our-story .row.section-margin .exper:focus-within {
+            background: transparent;
+        }
+        .our-story .row.section-margin .exper .numb-ex .word {
+            color: rgba(255, 255, 255, 0.62);
+            transition: color 0.3s ease;
+        }
+        .our-story .row.section-margin .exper:hover .numb-ex .word,
+        .our-story .row.section-margin .exper:focus-within .numb-ex .word {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .our-story .row.section-margin .exper h4 {
+            color: rgba(255, 255, 255, 0.86);
+            transition: color 0.3s ease;
+        }
+        .our-story .row.section-margin .exper:hover h4,
+        .our-story .row.section-margin .exper:focus-within h4 {
+            color: #fff;
+        }
+        @keyframes feature-sweep-ltr {
+            0% {
+                transform: translateX(-130%);
+            }
+            100% {
+                transform: translateX(130%);
+            }
         }
         
         /* Navigation Buttons */
@@ -446,6 +550,21 @@
             }
             .product-specs-grid {
                 grid-template-columns: 1fr;
+            }
+            .slider-project .swiper-slide.product-slide-featured .product-image-panel {
+                aspect-ratio: auto;
+                min-height: 320px !important;
+                padding: 16px !important;
+            }
+            .slider-project .swiper-slide.product-slide-featured .product-image-animated {
+                height: auto !important;
+                transform: scale(1.08);
+            }
+            .slider-project .swiper-slide.product-slide-featured .product-image-col {
+                gap: 18px;
+            }
+            .our-story .row.section-margin .exper {
+                padding: 6px 0;
             }
         }
 
@@ -863,10 +982,21 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <!-- Product 1: Single Station Test Rig -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Valve manufacturers</span>
+                                                <span class="use-case-tag">Oil and gas industries</span>
+                                                <span class="use-case-tag">Power plants</span>
+                                                <span class="use-case-tag">Industrial pipeline systems</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="content-text product-info-modern">
@@ -926,184 +1056,213 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Valve manufacturers</span>
-                                                <span class="use-case-tag">Oil and gas industries</span>
-                                                <span class="use-case-tag">Power plants</span>
-                                                <span class="use-case-tag">Industrial pipeline systems</span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 2: Multi Station Test Rig -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product2.png" alt="Multi Station Test Rig" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product2.png" alt="Multi Station Test Rig" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Valve manufacturing plants</span>
+                                                <span class="use-case-tag">Large scale industrial production</span>
+                                                <span class="use-case-tag">Pipeline component testing</span>
+                                                <span class="use-case-tag">Industrial quality assurance facilities</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Multi Station Test Rig</h3>
-                                            <p>Multi Station Test Rigs enable simultaneous testing of multiple valves or components, increasing operational efficiency and reducing testing time for high volume industrial environments.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>Multiple testing stations</li>
-                                                <li>Automated testing control</li>
-                                                <li>High pressure hydraulic systems</li>
-                                                <li>Industrial grade instrumentation</li>
-                                                <li>Scalable testing infrastructure</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Valve manufacturing plants</li>
-                                                <li>Large scale industrial production</li>
-                                                <li>Pipeline component testing</li>
-                                                <li>Industrial quality assurance facilities</li>
-                                            </ul>
+                                            <p class="product-subtitle">Simultaneous testing architecture for high-volume industrial validation.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Stations</span></div><p class="spec-value spec-value--highlight">Multiple testing stations</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Control</span></div><p class="spec-value">Automated testing control</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure System</span></div><p class="spec-value spec-value--highlight">High pressure hydraulic systems</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Instrumentation</span></div><p class="spec-value">Industrial grade instrumentation</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Scalability</span></div><p class="spec-value">Scalable testing infrastructure</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 3: Torque Rig -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product8.png" alt="Torque Rig" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product8.png" alt="Torque Rig" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Valve torque validation</span>
+                                                <span class="use-case-tag">Mechanical component testing</span>
+                                                <span class="use-case-tag">Industrial equipment calibration</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Torque Rig</h3>
-                                            <p>Torque Rigs are used for accurate torque testing of valves and mechanical components to ensure they operate within specified performance limits.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>High precision torque measurement</li>
-                                                <li>Digital monitoring systems</li>
-                                                <li>Heavy duty mechanical testing platform</li>
-                                                <li>Adjustable testing configurations</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Valve torque validation</li>
-                                                <li>Mechanical component testing</li>
-                                                <li>Industrial equipment calibration</li>
-                                            </ul>
+                                            <p class="product-subtitle">Accurate torque validation for valves and mechanical components.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Measurement</span></div><p class="spec-value spec-value--highlight">High precision torque measurement</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Digital monitoring systems</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Platform</span></div><p class="spec-value">Heavy duty mechanical testing platform</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Configuration</span></div><p class="spec-value">Adjustable testing configurations</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 4: Landing Gear Test Rig -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product4.png" alt="Landing Gear Test Rig" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product4.png" alt="Landing Gear Test Rig" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Aerospace component testing</span>
+                                                <span class="use-case-tag">Mechanical load validation</span>
+                                                <span class="use-case-tag">Structural testing environments</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Landing Gear Test Rig</h3>
-                                            <p>Landing Gear Test Rigs are specialized systems used for testing landing gear components under simulated operational conditions to verify strength, durability, and mechanical reliability.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>Hydraulic load simulation</li>
-                                                <li>High strength testing frame</li>
-                                                <li>Digital load monitoring systems</li>
-                                                <li>Safety compliant design</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Aerospace component testing</li>
-                                                <li>Mechanical load validation</li>
-                                                <li>Structural testing environments</li>
-                                            </ul>
+                                            <p class="product-subtitle">Simulated landing gear validation for durability and mechanical reliability.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Load Simulation</span></div><p class="spec-value spec-value--highlight">Hydraulic load simulation</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Frame</span></div><p class="spec-value">High strength testing frame</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Digital load monitoring systems</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Compliance</span></div><p class="spec-value">Safety compliant design</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 5: Flanged Valves Test Rig -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product5.png" alt="Flanged Valves Test Rig" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product5.png" alt="Flanged Valves Test Rig" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Oil and gas industries</span>
+                                                <span class="use-case-tag">Chemical plants</span>
+                                                <span class="use-case-tag">Industrial pipeline infrastructure</span>
+                                                <span class="use-case-tag">Valve manufacturing plants</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Flanged Valves Test Rig</h3>
-                                            <p>Flanged Valve Test Rigs are engineered to test flanged valves for pressure integrity, sealing performance, and operational reliability.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>High pressure hydraulic testing</li>
-                                                <li>Precision sealing verification</li>
-                                                <li>Industrial grade test chambers</li>
-                                                <li>Automated monitoring system</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Oil and gas industries</li>
-                                                <li>Chemical plants</li>
-                                                <li>Industrial pipeline infrastructure</li>
-                                                <li>Valve manufacturing plants</li>
-                                            </ul>
+                                            <p class="product-subtitle">Pressure integrity and sealing reliability validation for flanged valves.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure Testing</span></div><p class="spec-value spec-value--highlight">High pressure hydraulic testing</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Sealing</span></div><p class="spec-value">Precision sealing verification</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Chambers</span></div><p class="spec-value">Industrial grade test chambers</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Automated monitoring system</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 6: Loops / Simulations -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product6.png" alt="Loops / Simulations" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product6.png" alt="Loops / Simulations" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Process industry testing</span>
+                                                <span class="use-case-tag">Industrial R&amp;D facilities</span>
+                                                <span class="use-case-tag">Engineering validation environments</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Loops / Simulations</h3>
-                                            <p>Loop and Simulation systems replicate real industrial process conditions to test valves, pipelines, and equipment performance under controlled environments.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>Flow simulation systems</li>
-                                                <li>Industrial pressure loops</li>
-                                                <li>Fluid circulation testing</li>
-                                                <li>Real time monitoring systems</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Process industry testing</li>
-                                                <li>Industrial R&D facilities</li>
-                                                <li>Engineering validation environments</li>
-                                            </ul>
+                                            <p class="product-subtitle">Real-process simulation systems for controlled validation and monitoring.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Flow Simulation</span></div><p class="spec-value spec-value--highlight">Flow simulation systems</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure Loops</span></div><p class="spec-value">Industrial pressure loops</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Circulation</span></div><p class="spec-value">Fluid circulation testing</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Real time monitoring systems</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Product 7: Steel Mill Parts -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide product-slide-featured">
                                 <div class="row">
-                                    <div class="col-md-6 product-image-panel">
-                                        <img src="assets/img/product7.png" alt="Steel Mill Parts" class="img-fluid product-image-animated">
+                                    <div class="col-md-6 product-image-col">
+                                        <div class="product-image-panel">
+                                            <img src="assets/img/product7.png" alt="Steel Mill Parts" class="img-fluid product-image-animated">
+                                        </div>
+                                        <div class="image-side-usecases">
+                                            <h4 class="info-section-title">Use Cases</h4>
+                                            <div class="use-case-tags">
+                                                <span class="use-case-tag">Steel manufacturing plants</span>
+                                                <span class="use-case-tag">Heavy industrial machinery</span>
+                                                <span class="use-case-tag">Metal processing facilities</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="content-text">
+                                        <div class="content-text product-info-modern">
                                             <h3>Steel Mill Parts</h3>
-                                            <p>CTPL also manufactures precision engineered components and specialized equipment used in steel mills and heavy industrial manufacturing facilities.</p>
-                                            <h4>Specifications:</h4>
-                                            <ul>
-                                                <li>Heavy duty steel components</li>
-                                                <li>Custom engineered parts</li>
-                                                <li>High durability industrial materials</li>
-                                                <li>Designed for extreme industrial conditions</li>
-                                            </ul>
-                                            <h4>Use Cases:</h4>
-                                            <ul>
-                                                <li>Steel manufacturing plants</li>
-                                                <li>Heavy industrial machinery</li>
-                                                <li>Metal processing facilities</li>
-                                            </ul>
+                                            <p class="product-subtitle">Precision engineered parts for steel and heavy industrial operations.</p>
+                                            <h4 class="info-section-title">Specifications</h4>
+                                            <div class="product-specs-card">
+                                                <div class="product-specs-grid">
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Components</span></div><p class="spec-value spec-value--highlight">Heavy duty steel components</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Engineering</span></div><p class="spec-value">Custom engineered parts</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Material</span></div><p class="spec-value">High durability industrial materials</p></div>
+                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Operating Condition</span></div><p class="spec-value">Designed for extreme industrial conditions</p></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

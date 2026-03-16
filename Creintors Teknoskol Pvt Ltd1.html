@@ -15,8 +15,11 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <style>
         /* Product Slider Styling */
+        .slider-project {
+            position: relative;
+        }
         .slider-project .swiper-container {
-            min-height: 650px;
+            min-height: 540px;
             height: auto;
             overflow: hidden;
             max-width: 1200px;
@@ -24,9 +27,10 @@
         }
         .slider-project .swiper-slide {
             height: auto;
-            min-height: 650px;
-            padding: 20px 0;
+            min-height: 0;
+            padding: 0;
             width: 100% !important;
+            flex-shrink: 0;
         }
         .slider-project .swiper-wrapper {
             align-items: center;
@@ -37,6 +41,41 @@
             justify-content: center;
             max-width: 1080px;
             margin: 0 auto;
+            min-height: 520px;
+        }
+        .slider-project.section-margin {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .capabilities-stats-row {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        #capabilities.section-margin {
+            margin-bottom: 0 !important;
+            padding-bottom: 0;
+        }
+        #capabilities .capabilities-stats-row {
+            margin-bottom: 0;
+        }
+        .slider-project.section-margin {
+            margin-top: 0 !important;
+        }
+        .our-story .inner > p[data-dsn-animate] {
+            width: 78%;
+            max-width: 860px;
+            line-height: 1.55;
+            margin-bottom: 80px !important;
+        }
+        .our-story .about-features-row {
+            margin-top: 0 !important;
+        }
+        @media only screen and (max-width: 991px) {
+            .our-story .inner > p[data-dsn-animate] {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 40px !important;
+            }
         }
         .slider-project .swiper-slide .col-md-6 {
             display: flex;
@@ -47,6 +86,53 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child {
+            background: #050505;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background: url('assets/img/globalpresence.png') center / 120% auto no-repeat;
+            opacity: 0.14;
+            animation: product-bg-drift 12s linear infinite alternate;
+            z-index: 1;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.72) 50%, rgba(5, 5, 5, 0.9));
+            z-index: 1;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            transition: transform 0.35s ease;
+            position: relative;
+            z-index: 2;
+        }
+        .slider-project .swiper-slide .row > .col-md-6:first-child:hover img {
+            transform: scale(1.04);
+        }
+        @keyframes product-bg-drift {
+            0% {
+                transform: translateX(-6%);
+            }
+            100% {
+                transform: translateX(6%);
+            }
         }
         
         /* Content Text Styling */
@@ -92,11 +178,14 @@
             cursor: pointer;
         }
         .slider-project .slider-button-prev {
-            left: 20px;
+            left: -52px;
         }
         .slider-project .slider-button-next {
-            right: 20px;
+            right: -52px;
             left: auto;
+        }
+        .slider-project .one-title {
+            margin-bottom: 26px;
         }
         .slider-project .slider-button-prev div,
         .slider-project .slider-button-next div {
@@ -123,8 +212,11 @@
         
         /* Pagination */
         .slider-project .swiper-pagination {
-            bottom: 20px;
-            text-align: center;
+            display: none !important;
+        }
+        .slider-project .slider-button-next::after {
+            content: none !important;
+            display: none !important;
         }
         .slider-project .swiper-pagination-bullet {
             background: rgba(255,255,255,0.5);
@@ -133,14 +225,159 @@
             background: rgba(255,255,255,0.9);
         }
         
-        @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 768px) {
             .slider-project .swiper-container {
-                min-height: 500px;
+                min-height: 0;
             }
             .slider-project .swiper-slide {
-                min-height: 500px;
+                min-height: 0;
                 padding: 10px 0;
             }
+            .slider-project .swiper-slide .row {
+                min-height: auto;
+            }
+            .slider-project .swiper-slide .row > .col-md-6:first-child {
+                min-height: 300px;
+                padding: 16px;
+                margin-bottom: 20px;
+            }
+            .slider-project .swiper-slide .row > .col-md-6:first-child img {
+                max-height: 260px;
+            }
+            .slider-project .slider-button-prev {
+                left: 8px;
+            }
+            .slider-project .slider-button-next {
+                right: 8px;
+            }
+            .slider-project.section-margin {
+                margin-top: 16px;
+                margin-bottom: 24px;
+            }
+        }
+
+        /* Global Presence Section */
+        .global-presence-section .box-im {
+            padding-right: 30px;
+        }
+        .global-presence-section .box-im.section-padding {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .global-presence-section .box-im .image-zoom {
+            width: 100%;
+            height: 460px;
+            min-height: 0;
+            overflow: hidden;
+            background: #050505;
+        }
+        .global-presence-section .box-im img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            margin-left: 0;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1.08);
+            transform-origin: center;
+        }
+        .global-presence-section .gp-image-trigger {
+            display: block;
+            width: 100%;
+            border: 0;
+            padding: 0;
+            background: transparent;
+            cursor: zoom-in;
+        }
+        .global-presence-section .gp-image-trigger img {
+            display: block;
+        }
+        .global-presence-section .global-presence-copy {
+            text-align: left;
+            max-width: 520px;
+            margin-left: auto;
+            padding-left: 24px;
+        }
+        .global-presence-section .global-presence-title {
+            width: 100%;
+            margin-bottom: 22px;
+        }
+        .global-presence-section .global-presence-title .title-main {
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .global-presence-section .global-presence-copy p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.75;
+        }
+        @media only screen and (max-width: 991px) {
+            .global-presence-section .box-im {
+                padding-right: 15px;
+            }
+            .global-presence-section .box-im .image-zoom {
+                height: 320px;
+            }
+            .global-presence-section .box-im img {
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+            }
+            .global-presence-section .global-presence-copy {
+                margin-top: 30px;
+                margin-left: 0;
+                max-width: 100%;
+                padding-left: 0;
+            }
+            .global-presence-section .global-presence-title .title-main {
+                white-space: normal;
+            }
+        }
+
+        /* Global Presence custom image modal */
+        .gp-image-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 12000;
+            padding: 30px;
+        }
+        .gp-image-modal.is-open {
+            display: flex;
+        }
+        .gp-image-modal img {
+            max-width: 94vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+        .gp-image-modal-close {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            width: 42px;
+            height: 42px;
+            border: 0;
+            padding: 0;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 28px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+            opacity: 1;
+            z-index: 12010;
+        }
+        .gp-image-modal-close:hover,
+        .gp-image-modal-close:focus {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            opacity: 1;
         }
     </style>
 </head>
@@ -303,9 +540,18 @@
                             <h2 class="title-main">Creintors Teknosol Pvt Ltd</h2>
                         </div>
                         <div class="inner">
-                            <p data-dsn-animate="up">Creintors Teknosol Private Limited (CTPL) is the precision engineering division of the Creintors Group, focused on designing and manufacturing advanced industrial testing systems and special purpose engineering equipment. Our expertise lies in developing reliable valve testing systems, simulation loops, and specialized industrial rigs that enable industries to test and validate critical components under real operational conditions. With a strong focus on engineering precision, reliability, and performance, CTPL delivers testing solutions that support industries such as energy, heavy engineering, manufacturing, and process industries. Our systems are designed to ensure that valves and components meet strict operational standards before deployment in real world industrial environments. Through innovative engineering and high quality manufacturing, we help industries improve safety, performance validation, and long term operational reliability.</p>
+                            <p data-dsn-animate="up">Creintors Teknosol specializes in engineering high-performance
+                                                    test rigs and validation systems that guarantee precision, reliability,
+                                                    and advanced analytics. From hydrostatic test rigs to electronic
+                                                    control and diagnostic benches, our solutions serve a wide range
+                                                    of industries including automotive, electrical, fluid power, and R&D.
+                                                    With in-house design, automation, and data integration expertise,
+                                                    we transform conventional testing into intelligent, efficient,
+                                                    and future-ready solutions.
+                                                    Whether it's for endurance, leakage, burst, or functional testing,
+                                                    CTPL delivers more than machines - we deliver confidence.</p>
                         </div>
-                        <div class="row section-margin" data-dsn-animate="up">
+                        <div class="row capabilities-stats-row" data-dsn-animate="up">
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">01</span></div><h4>Precision <br> Engineering</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced <br> Testing Systems</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">03</span></div><h4>Industrial <br> Reliability</h4></div></div>
@@ -369,7 +615,7 @@
                             </div>
                         </div>
 
-                        <div class="row section-margin" data-dsn-animate="up">
+                        <div class="row section-margin about-features-row" data-dsn-animate="up">
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
                                 <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
                                     <div>
@@ -413,8 +659,11 @@
                 
 
                 <div class="container slider-project section-margin">
-                    <div class="container section-margin">
+                    <div class="container">
                     <div class="one-title" data-dsn-animate="up">
+                        <div class="title-sub-container">
+                            <p class="title-sub">Offerings we provide</p>
+                        </div>
                         <h2 class="title-main" id="products">Our Products</h2>
                     </div>
                 </div>
@@ -626,20 +875,19 @@
                         </div>
 
                         <div class="swiper-pagination"></div>
-
-                        <div class="slider-button-prev">
-                            <div>
-                                <svg viewBox="0 0 40 40">
-                                    <polyline class="path" points="25.4 22.55 20 17.15 14.6 22.55"></polyline>
-                                </svg>
-                            </div>
+                    </div>
+                    <div class="slider-button-prev">
+                        <div>
+                            <svg viewBox="0 0 40 40">
+                                <polyline class="path" points="23.5 12.5 14.5 20 23.5 27.5"></polyline>
+                            </svg>
                         </div>
-                        <div class="slider-button-next">
-                            <div>
-                                <svg viewBox="0 0 40 40">
-                                    <polyline class="path" points="14.6 17.45 20 22.85 25.4 17.45"></polyline>
-                                </svg>
-                            </div>
+                    </div>
+                    <div class="slider-button-next">
+                        <div>
+                            <svg viewBox="0 0 40 40">
+                                <polyline class="path" points="16.5 12.5 25.5 20 16.5 27.5"></polyline>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -654,16 +902,29 @@
 
 
 
-                <div class="box-seat box-seat-full section-margin">
-                    <div class="container-fluid">
-                        <div class="inner-img" data-dsn-grid="move-up"><img data-dsn-scale="1" data-dsn-y="30%" src="assets/img/globalpresence.png" alt="Global Presence"></div>
-                        <div class="pro-text pro-text-left">
-                            <div class="title-sub-container"><p class="title-sub">Our Global Presence</p></div>
-                            <h2>Our Global Presence</h2>
-                            <p>Creintors Teknosol systems support industrial operations across multiple regions. Our testing technologies are trusted by manufacturers and engineering companies working in critical industries worldwide.</p>
+                <section class="container section-margin global-presence-section">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 box-im section-padding">
+                            <div class="image-zoom" data-dsn="parallax">
+                                <button type="button" class="single-image gp-image-trigger" data-full-src="assets/img/globalpresence.png" aria-label="Open Global Presence image">
+                                    <img src="assets/img/globalpresence.png" alt="Global Presence">
+                                </button>
+                            
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="intro-text global-presence-copy">
+                                <div class="inner">
+                                    <div class="one-title global-presence-title" data-dsn-animate="up">
+                                        <div class="title-sub-container"><p class="title-sub">Our Global Presence</p></div>
+                                        <h2 class="title-main" data-dsn-animate="text">Innovation Across Borders</h2>
+                                    </div>
+                                    <p data-dsn-animate="up">Creintors Teknosol systems support industrial operations across multiple regions. Our testing technologies are trusted by manufacturers and engineering companies working in critical industries worldwide.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <section class="brand-client section-margin">
                     <div class="container">
@@ -736,8 +997,11 @@
                     </div>
                     <div class="copyright">
                         <div class="text-center">
-                            <p>© 2020 Droow Digital Agency</p>
-                            <div class="copright-text over-hidden">Designed by <a class="link-hover" data-hover-text="DSN Grid" href="#" target="_blank">DSN Grid</a></div>
+                            <p>&copy; 2026 Creintors Group of Companies. All rights reserved.</p>
+                            <div class="copright-text over-hidden">Designed by <a class="link-hover"
+                                    data-hover-text="DSN Grid" href="https://www.cubiccode.in/" target="_blank">CUBICCODE</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -757,10 +1021,78 @@
         <div class="cursor-helper cursor-link"></div>
     </div>
 
+    <div class="gp-image-modal" id="gpImageModal" aria-hidden="true">
+        <button type="button" class="gp-image-modal-close" id="gpImageModalClose" aria-label="Close image">&times;</button>
+        <img id="gpImageModalImg" src="" alt="Global Presence">
+    </div>
+
     <script src="assets/js/jquery-3.1.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/dsn-grid.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        (function () {
+            var el = document.querySelector('.slider-project .swiper-container');
+            if (!el || typeof Swiper === 'undefined') return;
+            if (el.swiper) el.swiper.destroy(true, true);
+            new Swiper(el, {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: document.querySelector('.slider-project .slider-button-next'),
+                    prevEl: document.querySelector('.slider-project .slider-button-prev')
+                },
+                pagination: {
+                    el: document.querySelector('.slider-project .swiper-pagination'),
+                    type: 'fraction'
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var globalTrigger = document.querySelector('.global-presence-section .gp-image-trigger');
+            var modal = document.getElementById('gpImageModal');
+            var modalImg = document.getElementById('gpImageModalImg');
+            var closeBtn = document.getElementById('gpImageModalClose');
+            if (!modal || !modalImg || !closeBtn) return;
+
+            function closeModal() {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                modalImg.setAttribute('src', '');
+                document.body.style.overflow = '';
+            }
+
+            function openModal(src, alt) {
+                if (!src) return;
+                modalImg.setAttribute('src', src);
+                modalImg.setAttribute('alt', alt || 'Image preview');
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            if (globalTrigger) {
+                globalTrigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openModal(globalTrigger.getAttribute('data-full-src'), 'Global Presence');
+                });
+            }
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('click', function (e) {
+                var directImageLink = e.target.closest('.global-presence-section a[href$=".png"], .global-presence-section a[href$=".jpg"], .global-presence-section a[href$=".jpeg"]');
+                if (directImageLink) e.preventDefault();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+            });
+        })();
+    </script>
     <script>
         (function () {
             var counters = document.querySelectorAll('.count-up');

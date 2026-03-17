@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
-    <link href="assets/css/plugins.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/plugins.css?v=20260317" rel="stylesheet" />
+    <link href="assets/css/style.css?v=20260317" rel="stylesheet" />
     <style>
         /* Product Slider Styling */
         .slider-project {
@@ -1044,7 +1044,7 @@
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
                                 <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
                                     <div>
-                                        <span class="count-up" data-target="1500" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">0</span>
+                                        <span class="count-up" data-target="1500" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">1500+</span>
                                     </div>
                                     <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Max Pressure (Bar)</h5>
                                 </div>
@@ -1052,7 +1052,7 @@
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
                                 <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
                                     <div>
-                                        <span class="count-up" data-target="56" data-suffix="&quot;" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">0</span>
+                                        <span class="count-up" data-target="56" data-suffix="&quot;" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">56&quot;</span>
                                     </div>
                                     <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Valve Size Capacity</h5>
                                 </div>
@@ -1060,7 +1060,7 @@
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
                                 <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
                                     <div>
-                                        <span class="count-up" data-target="7" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">0</span>
+                                        <span class="count-up" data-target="7" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">7</span>
                                     </div>
                                     <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Product Categories</h5>
                                 </div>
@@ -1068,7 +1068,7 @@
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
                                 <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
                                     <div>
-                                        <span class="count-up" data-target="10" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">0</span>
+                                        <span class="count-up" data-target="10" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">10+</span>
                                     </div>
                                     <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Years of Expertise</h5>
                                 </div>
@@ -1540,10 +1540,11 @@
         <img id="gpImageModalImg" src="" alt="Global Presence">
     </div>
 
-    <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/dsn-grid.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js?v=20260317"></script>
+    <script src="assets/js/plugins.js?v=20260317"></script>
+    <script src="assets/js/dsn-grid.js?v=20260317"></script>
+    <script src="assets/js/custom.js?v=20260317"></script>
+    <script src="assets/js/countup-init.js?v=20260317"></script>
     <script>
         (function () {
             var el = document.querySelector('.slider-project .swiper-container');
@@ -1646,6 +1647,11 @@
                 }, { threshold: 0.4 });
 
                 counters.forEach(function (counter) { observer.observe(counter); });
+
+                // Fallback: ensure counters don't stay at 0 if observer misses.
+                setTimeout(function () {
+                    counters.forEach(animateCounter);
+                }, 900);
             } else {
                 counters.forEach(animateCounter);
             }

@@ -84,6 +84,73 @@
             line-height: 1.55;
             margin-bottom: 80px !important;
         }
+        .our-story .about-intro-row {
+            margin-top: 8px;
+            margin-bottom: 20px;
+            align-items: flex-start !important;
+        }
+        .our-story .about-intro-text {
+            padding-right: 30px;
+        }
+        .our-story .about-intro-row p[data-dsn-animate] {
+            width: 100%;
+            max-width: none;
+            line-height: 1.55;
+            margin-bottom: 0 !important;
+            max-width: 760px;
+        }
+        .our-story .about-intro-visual {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 10px;
+        }
+        .our-story .about-rig-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: #080808;
+            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+            transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+            width: min(100%, 360px);
+            margin-left: auto;
+            margin-right: -44px;
+        }
+        .our-story .about-rig-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0.24) 50%, rgba(255, 255, 255, 0) 72%);
+            transform: translateX(-155%);
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+            pointer-events: none;
+            z-index: 2;
+        }
+        .our-story .about-rig-card img {
+            width: 100%;
+            height: 242px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.55s ease, filter 0.45s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .our-story .about-highlights-row {
+            margin-top: 22px !important;
+            margin-bottom: 0 !important;
+        }
+        .our-story .about-rig-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 26px 58px rgba(0, 0, 0, 0.58);
+            border-color: rgba(255, 255, 255, 0.34);
+        }
+        .our-story .about-rig-card:hover img {
+            transform: scale(1.06);
+            filter: brightness(1.08);
+        }
+        .our-story .about-rig-card:hover::after {
+            transform: translateX(155%);
+        }
         .our-story .about-features-row {
             margin-top: 0 !important;
         }
@@ -92,6 +159,28 @@
                 width: 100%;
                 max-width: 100%;
                 margin-bottom: 40px !important;
+            }
+            .our-story .about-intro-row {
+                margin-bottom: 24px;
+            }
+            .our-story .about-intro-text {
+                padding-right: 0;
+            }
+            .our-story .about-intro-visual {
+                justify-content: flex-start;
+                padding-left: 0;
+            }
+            .our-story .about-rig-card {
+                width: 100%;
+                max-width: 440px;
+                margin-right: 0;
+            }
+            .our-story .about-rig-card img {
+                height: auto;
+                min-height: 0;
+            }
+            .our-story .about-highlights-row {
+                margin-top: 14px !important;
             }
         }
         .slider-project .swiper-slide .col-md-6 {
@@ -217,6 +306,39 @@
             100% {
                 transform: translateX(2%);
             }
+        }
+        .dsn-slider .footer-slid .main-social .social-btn {
+            width: 1px;
+            height: 30px;
+            position: relative;
+            display: block;
+            cursor: pointer;
+        }
+        .dsn-slider .footer-slid .main-social .social-btn .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(218, 218, 218, 0.24);
+            animation: background 5s infinite;
+        }
+        .dsn-slider .footer-slid .main-social .social-btn .triangle {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: -4px;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid rgba(218, 218, 218, 0.24);
+            animation: triangle 5s infinite;
+            transform-origin: 50% 0;
+        }
+        .dsn-slider .footer-slid .main-social .social-icon:after {
+            display: none !important;
+            width: 0 !important;
         }
         
         /* Content Text Styling */
@@ -390,7 +512,7 @@
             background: rgba(255, 255, 255, 0.08);
             color: #fff;
         }
-        .our-story .row.section-margin .exper {
+        .our-story .about-highlights-row .exper {
             position: relative;
             overflow: hidden;
             border: 0;
@@ -399,7 +521,7 @@
             background: transparent;
             transition: color 0.3s ease;
         }
-        .our-story .row.section-margin .exper::before {
+        .our-story .about-highlights-row .exper::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -407,32 +529,32 @@
             transform: translateX(-130%);
             pointer-events: none;
         }
-        .our-story .row.section-margin .exper > * {
+        .our-story .about-highlights-row .exper > * {
             position: relative;
             z-index: 1;
         }
-        .our-story .row.section-margin .exper:hover::before,
-        .our-story .row.section-margin .exper:focus-within::before {
+        .our-story .about-highlights-row .exper:hover::before,
+        .our-story .about-highlights-row .exper:focus-within::before {
             animation: feature-sweep-ltr 1.35s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
         }
-        .our-story .row.section-margin .exper:hover,
-        .our-story .row.section-margin .exper:focus-within {
+        .our-story .about-highlights-row .exper:hover,
+        .our-story .about-highlights-row .exper:focus-within {
             background: transparent;
         }
-        .our-story .row.section-margin .exper .numb-ex .word {
+        .our-story .about-highlights-row .exper .numb-ex .word {
             color: rgba(255, 255, 255, 0.62);
             transition: color 0.3s ease;
         }
-        .our-story .row.section-margin .exper:hover .numb-ex .word,
-        .our-story .row.section-margin .exper:focus-within .numb-ex .word {
+        .our-story .about-highlights-row .exper:hover .numb-ex .word,
+        .our-story .about-highlights-row .exper:focus-within .numb-ex .word {
             color: rgba(255, 255, 255, 0.95);
         }
-        .our-story .row.section-margin .exper h4 {
+        .our-story .about-highlights-row .exper h4 {
             color: rgba(255, 255, 255, 0.86);
             transition: color 0.3s ease;
         }
-        .our-story .row.section-margin .exper:hover h4,
-        .our-story .row.section-margin .exper:focus-within h4 {
+        .our-story .about-highlights-row .exper:hover h4,
+        .our-story .about-highlights-row .exper:focus-within h4 {
             color: #fff;
         }
         @keyframes feature-sweep-ltr {
@@ -563,7 +685,7 @@
             .slider-project .swiper-slide.product-slide-featured .product-image-col {
                 gap: 18px;
             }
-            .our-story .row.section-margin .exper {
+            .our-story .about-highlights-row .exper {
                 padding: 6px 0;
             }
         }
@@ -785,7 +907,7 @@
                                         <div class="title-text-header">
                                             <div class="title-text-header-inner">
                                                 <p class="title-subtitle" style="font-size:25px !important;">Precision Valve Testing Systems</p>
-                                                <a href="Creintors Teknoskol Pvt Ltd1.html">Creintors Teknosol Pvt Ltd</a>
+                                                <a href="Creintors-Teknoskol-Pvt-Ltd.html">Creintors Teknosol Pvt Ltd</a>
                                             </div>
                                         </div>
                                         <p>Creintors Teknosol Pvt Ltd designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
@@ -797,7 +919,7 @@
                                     </div>
                                 </div>
                                 <div class="image-container">
-                                    <div class="image-bg cover-bg" data-image-src="assets/img/homebanner2.jpg" data-overlay="4">
+                                    <div class="image-bg cover-bg" data-dsn-ajax="img" data-image-src="assets/img/homebanner2.jpg" data-overlay="4">
                                         <img src="assets/img/homebanner2.jpg" alt="Industrial valve testing systems">
                                     </div>
                                 </div>
@@ -818,28 +940,11 @@
                     <div class="main-social">
                         <div class="social-icon">
                             <div class="social-btn">
-                                <div class="svg-wrapper">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.3 23.2">
-                                        <path d="M19.4 15.5c-1.2 0-2.4.6-3.1 1.7L7.8 12v-.7l8.5-5.1c.7 1 1.9 1.6 3.1 1.6 2.1 0 3.9-1.7 3.9-3.9S21.6 0 19.4 0s-3.9 1.7-3.9 3.9v.4L7 9.3c-1.3-1.7-3.7-2-5.4-.8s-2.1 3.7-.8 5.4c.7 1 1.9 1.6 3.1 1.6s2.4-.6 3.1-1.6l8.5 5v.4c0 2.1 1.7 3.9 3.9 3.9s3.9-1.7 3.9-3.9c0-2.1-1.7-3.8-3.9-3.8zm0-13.6c1.1 0 1.9.9 1.9 1.9s-.9 1.9-1.9 1.9-1.9-.7-1.9-1.8.8-2 1.9-2zM3.9 13.6c-1.1 0-1.9-.9-1.9-1.9s.9-1.9 1.9-1.9 1.9.9 1.9 1.9-.8 1.9-1.9 1.9zm15.5 7.8c-1.1 0-1.9-.9-1.9-1.9s.9-1.9 1.9-1.9 1.9.9 1.9 1.9-.8 1.8-1.9 1.9z"></path>
-                                    </svg>
-                                </div>
+                                <span class="background"></span>
+                                <span class="triangle"></span>
                             </div>
                         </div>
-                        <!-- <ul class="social-network">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="control-num"><span class="sup active">01</span></div>
-                    <div class="control-nav">
-                        <div class="prev-container" data-dsn="parallax">
-                            <svg viewBox="0 0 40 40"><path class="path circle" d="M20,2A18,18,0,1,1,2,20,18,18,0,0,1,20,2"></path><polyline class="path" points="14.6 17.45 20 22.85 25.4 17.45"></polyline></svg>
-                        </div>
-                        <div class="next-container" data-dsn="parallax">
-                            <svg viewBox="0 0 40 40"><path class="path circle" d="M20,2A18,18,0,1,1,2,20,18,18,0,0,1,20,2"></path><polyline class="path" points="14.6 17.45 20 22.85 25.4 17.45"></polyline></svg>
-                        </div> -->
+                         
                     </div>
                 </section>
             </div>
@@ -852,18 +957,27 @@
                             <h2 class="title-main">Building excellence through precision engineering</h2>
                         </div>
                         <div class="inner">
-                            <p data-dsn-animate="up">Creintors Teknosol specializes in engineering high-performance
-                                                    test rigs and validation systems that guarantee precision, reliability,
-                                                    and advanced analytics. From hydrostatic test rigs to electronic
-                                                    control and diagnostic benches, our solutions serve a wide range
-                                                    of industries including automotive, electrical, fluid power, and R&D.
-                                                    With in-house design, automation, and data integration expertise,
-                                                    we transform conventional testing into intelligent, efficient,
-                                                    and future-ready solutions.
-                                                    Whether it's for endurance, leakage, burst, or functional testing,
-                                                    CTPL delivers more than machines - we deliver confidence.</p>
+                            <div class="row align-items-center about-intro-row">
+                                <div class="col-lg-7 about-intro-text">
+                                    <p data-dsn-animate="up">Creintors Teknosol specializes in engineering high-performance
+                                                            test rigs and validation systems that guarantee precision, reliability,
+                                                            and advanced analytics. From hydrostatic test rigs to electronic
+                                                            control and diagnostic benches, our solutions serve a wide range
+                                                            of industries including automotive, electrical, fluid power, and R&D.
+                                                            With in-house design, automation, and data integration expertise,
+                                                            we transform conventional testing into intelligent, efficient,
+                                                            and future-ready solutions.
+                                                            Whether it's for endurance, leakage, burst, or functional testing,
+                                                            CTPL delivers more than machines - we deliver confidence.</p>
+                                </div>
+                                <div class="col-lg-5 mt-4 mt-lg-0 about-intro-visual">
+                                    <div class="about-rig-card image-zoom" data-dsn="parallax" data-dsn-animate="up">
+                                        <img src="assets/img/pressure-rig.jpg" alt="Pressure rig system">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row section-margin" data-dsn-animate="up">
+                        <div class="row about-highlights-row" data-dsn-animate="up">
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">01</span></div><h4>Precision <br> Engineering</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced <br> Testing Systems</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">03</span></div><h4>Industrial <br> Reliability</h4></div></div>
@@ -885,7 +999,7 @@
                                     <div class="image" data-overlay="5"><img src="assets/img/High pressure valve testing.png" alt="High Pressure Valve Testing"></div>
                                     <div class="content">
                                         <div class="background"></div>
-                                        <h5>Core Capability</h5>
+                                        
                                         <div class="cta"><a href="#">High Pressure Valve Testing</a></div>
                                         <p>Shell and seat testing across demanding pressure envelopes with accurate instrumentation and repeatable validation cycles.</p>
                                     </div>
@@ -896,7 +1010,7 @@
                                     <div class="image" data-overlay="5"><img src="assets/img/leak detection system.png" alt="Leak Detection Systems"></div>
                                     <div class="content">
                                         <div class="background"></div>
-                                        <h5>Core Capability</h5>
+                                        
                                         <div class="cta"><a href="#">Leak Detection Systems</a></div>
                                         <p>High sensitivity leak detection architecture for seat leakage, shell leakage, and performance verification under controlled conditions.</p>
                                     </div>
@@ -907,7 +1021,7 @@
                                     <div class="image" data-overlay="5"><img src="assets/img/peformance and endurance testing.png" alt="Performance and Endurance Testing"></div>
                                     <div class="content">
                                         <div class="background"></div>
-                                        <h5>Core Capability</h5>
+                                        
                                         <div class="cta"><a href="#">Performance and Endurance Testing</a></div>
                                         <p>Engineered endurance cycles and dynamic operation profiles to assess long-term reliability before field use.</p>
                                     </div>
@@ -918,7 +1032,7 @@
                                     <div class="image" data-overlay="5"><img src="assets/img/automation and software integration.png" alt="Automation and Software"></div>
                                     <div class="content">
                                         <div class="background"></div>
-                                        <h5>Core Capability</h5>
+                                        
                                         <div class="cta"><a href="#">Automation and Software Integration</a></div>
                                         <p>PLC, SCADA, GSM/IoT, and cloud-ready reporting for live test monitoring, traceability, and remote data access.</p>
                                     </div>

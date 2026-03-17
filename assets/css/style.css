@@ -10415,7 +10415,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   border-radius: 0 3px 3px 0;
 }
 
-.dsn-slider .nav-slider .swiper-slide .image-container .image-bg:before {
+.dsn-slider .nav-slider .hero-subtitle-single-line .image-container .image-bg:before {
   visibility: hidden;
 }
 

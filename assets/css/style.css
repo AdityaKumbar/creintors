@@ -6364,6 +6364,16 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   }
 }
 
+/* Keep the Our Solutions body copy left-aligned on mobile (Mobile M/S). */
+@media only screen and (max-width: 767px) {
+  .box-seat.box-seat-full .pro-text.pro-text-left > p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
 .box-seat .play-button {
   position: absolute;
   left: 50%;

@@ -515,11 +515,23 @@
         .our-story .about-highlights-row .exper {
             position: relative;
             overflow: hidden;
-            border: 0;
-            border-radius: 0;
-            padding: 8px 0;
-            background: transparent;
-            transition: color 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 10px;
+            padding: 16px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            height: 100%;
+            min-height: 176px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .our-story .about-highlights-row {
+            align-items: stretch;
+        }
+        .our-story .about-highlights-row > [class*="col-"] {
+            display: flex;
         }
         .our-story .about-highlights-row .exper::before {
             content: "";
@@ -539,7 +551,8 @@
         }
         .our-story .about-highlights-row .exper:hover,
         .our-story .about-highlights-row .exper:focus-within {
-            background: transparent;
+            border-color: rgba(255, 255, 255, 0.28);
+            background: rgba(255, 255, 255, 0.04);
         }
         .our-story .about-highlights-row .exper .numb-ex .word {
             color: rgba(255, 255, 255, 0.62);
@@ -555,6 +568,11 @@
         .our-story .about-highlights-row .exper h4 {
             color: rgba(255, 255, 255, 0.86);
             transition: color 0.3s ease;
+            margin: 4px 0 0;
+            line-height: 1.2;
+            white-space: normal;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
         .our-story .about-highlights-row .exper:hover h4,
         .our-story .about-highlights-row .exper:focus-within h4 {
@@ -689,7 +707,8 @@
                 gap: 18px;
             }
             .our-story .about-highlights-row .exper {
-                padding: 6px 0;
+                padding: 12px 14px;
+                min-height: 156px;
             }
         }
 
@@ -1027,7 +1046,7 @@
                         </div>
                         <div class="row about-highlights-row" data-dsn-animate="up">
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">01</span></div><h4>Precision <br> Engineering</h4></div></div>
-                            <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced <br> Testing Systems</h4></div></div>
+                            <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">02</span></div><h4>Advanced<br>Testing</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">03</span></div><h4>Industrial <br> Reliability</h4></div></div>
                             <div class="col-md-3 col-6"><div class="exper"><div class="numb-ex"><span class="word">04</span></div><h4>Global <br> Applications</h4></div></div>
                         </div>

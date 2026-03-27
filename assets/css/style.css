@@ -1523,7 +1523,7 @@ body > * {
 }
 
 .main-root {
-  background: inherit;
+  background: #1a1a1a;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1585,6 +1585,7 @@ body > * {
 .wrapper {
   position: relative;
   background-color: #1a1a1a;
+  display: flow-root;
 }
 
 .section-padding {
@@ -4662,6 +4663,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   overflow: hidden;
 }
 
+
 .v-light .contact-up {
   background-color: #e6e6e6;
 }
@@ -4714,6 +4716,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
     flex-flow: wrap;
   }
 }
+
 
 .contact-up .c-wapp a .hiring {
   width: 50%;

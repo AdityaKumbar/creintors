@@ -861,6 +861,21 @@
             font-size: 11px;
             letter-spacing: 0.18em;
         }
+
+        .intro-about.our-story + .ctpl-vm-inline.section-margin {
+            margin-top: 72px !important;
+        }
+
+        .ctpl-vm-inline.section-margin + #capabilities.section-margin {
+            margin-top: 72px !important;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .intro-about.our-story + .ctpl-vm-inline.section-margin,
+            .ctpl-vm-inline.section-margin + #capabilities.section-margin {
+                margin-top: 44px !important;
+            }
+        }
     </style>
 </head>
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
@@ -1486,29 +1501,7 @@
 
 
 
-                <section class="container section-margin global-presence-section">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 box-im section-padding">
-                            <div class="image-zoom" data-dsn="parallax">
-                                <button type="button" class="single-image gp-image-trigger" data-full-src="assets/img/globalpresence.png" aria-label="Open Global Presence image">
-                                    <img src="assets/img/globalpresence.png" alt="Global Presence">
-                                </button>
-                            
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="intro-text global-presence-copy">
-                                <div class="inner">
-                                    <div class="one-title global-presence-title" data-dsn-animate="up">
-                                        <div class="title-sub-container"><p class="title-sub">Our Global Presence</p></div>
-                                        <h2 class="title-main" data-dsn-animate="text">Innovation Across Borders</h2>
-                                    </div>
-                                    <p data-dsn-animate="up">Creintors Teknosol systems support industrial operations across multiple regions. Our testing technologies are trusted by manufacturers and engineering companies working in critical industries worldwide.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
 
                 <section class="brand-client section-margin">
                     <div class="container">

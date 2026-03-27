@@ -318,6 +318,56 @@
             background-color: #f9f9f9;
         }
     </style>
+    <style>
+        .between-section-separator {
+            width: 100%;
+            height: 0;
+            margin: -46px 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .between-section-separator + .divisions-showcase {
+            margin-top: 62px !important;
+        }
+
+        .capabilities-separator {
+            width: 100%;
+            height: 0;
+            margin: -115px 0 24px;
+            border-top: 1px solid rgba(20, 24, 31, 0.14);
+        }
+
+        .capabilities-separator + .our-news.section-margin {
+            margin-top: 22px !important;
+        }
+
+        .box-gallery-vertical.section-padding {
+            padding-bottom: 68px !important;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .between-section-separator {
+                margin-top: -28px;
+            }
+
+            .between-section-separator + .divisions-showcase {
+                margin-top: 42px !important;
+            }
+
+            .capabilities-separator {
+                margin-top: -62px;
+                margin-bottom: 16px;
+            }
+
+            .capabilities-separator + .our-news.section-margin {
+                margin-top: 14px !important;
+            }
+
+            .box-gallery-vertical.section-padding {
+                padding-bottom: 46px !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -974,6 +1024,8 @@
                     </div>
                 </section>
 
+                <div class="between-section-separator" aria-hidden="true"></div>
+
                 <section class="our-services-2 divisions-showcase section-margin">
                     <div class="container">
                         <div class="one-title divisions-title" data-dsn-animate="up">
@@ -1334,6 +1386,8 @@
                 </div>
 
  
+
+                <div class="capabilities-separator" aria-hidden="true"></div>
 
                 <section class="our-news section-margin">
                     <div class="container">

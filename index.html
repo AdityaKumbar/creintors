@@ -131,6 +131,104 @@
             }
         }
     </style>
+    <style>
+        .industries-section .work-container {
+            position: relative;
+        }
+
+        .industries-section .industries-slider-nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 46%;
+            height: 0;
+            transform: translateY(-50%);
+            z-index: 6;
+            pointer-events: none;
+        }
+
+        .industries-section button.industries-slider-btn {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            transform: none;
+            border: 0 !important;
+            background: transparent !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            min-width: 0 !important;
+            line-height: 1 !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+            overflow: visible !important;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        .industries-section button.industries-slider-btn::before {
+            content: none !important;
+            display: none !important;
+        }
+
+        .industries-section .industries-prev {
+            left: 12px;
+        }
+
+        .industries-section .industries-next {
+            right: 12px;
+        }
+
+        .industries-section .industries-slider-btn > div {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .industries-section .industries-slider-btn:hover > div,
+        .industries-section .industries-slider-btn:focus > div {
+            border-color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.16);
+            transform: scale(1.05);
+        }
+
+        .industries-section .industries-slider-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .industries-section button.industries-slider-btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .industries-section .industries-slider-btn > div {
+                width: 38px;
+                height: 38px;
+            }
+
+            .industries-section .industries-prev {
+                left: 6px;
+            }
+
+            .industries-section .industries-next {
+                right: 6px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -184,7 +282,7 @@
                                 <li><a href="certifications.html">Certifications</a></li>
                                 <li><a href="awards-achievements.html">Award & achievements</a></li>
                                 <li><a href="policies.html">Policies</a></li>
-                                <li><a href="3i-ecosystem.html">3I Ecosystem</a></li>
+                                <li><a href="3i-ecosystem.html">3i Ecosystem</a></li>
                             </ul>
                         </li>
                         
@@ -300,7 +398,7 @@
                                         <p>At Creintors Teknosol, we don't just build test rigs - we build trust. Our rigs are designed to test what truly matters, ensuring every valve meets the highest standards of performance and reliability.</p>
 
                                         <div class="link-custom">
-                                            <a href="Creintors-Teknoskol-Pvt-Ltd.html" class="image-zoom effect-ajax" data-dsn="parallax" data-dsn-ajax="slider">
+                                            <a href="Creintors-Teknoskol-Pvt-Ltd.html" >
                                                 <span>Know More</span>
                                             </a>
                                         </div>
@@ -1058,6 +1156,22 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="industries-slider-nav" aria-label="Industries slider controls">
+                                        <button type="button" class="industries-slider-btn industries-prev" aria-label="Previous industry">
+                                            <div>
+                                                <svg viewBox="0 0 40 40" aria-hidden="true">
+                                                    <polyline class="path" points="23.5 12.5 14.5 20 23.5 27.5"></polyline>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="industries-slider-btn industries-next" aria-label="Next industry">
+                                            <div>
+                                                <svg viewBox="0 0 40 40" aria-hidden="true">
+                                                    <polyline class="path" points="16.5 12.5 25.5 20 16.5 27.5"></polyline>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1338,6 +1452,45 @@
     <script src="assets/js/dsn-grid.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/countup-init.js?v=20260317"></script>
+    <script>
+        (function ($) {
+            if (!$ || !$.fn || !$.fn.slick) return;
+
+            var $industrySlider = $('.industries-section .slick-slider');
+            if (!$industrySlider.length) return;
+
+            if ($industrySlider.hasClass('slick-initialized')) {
+                $industrySlider.slick('unslick');
+            }
+
+            $industrySlider.slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                autoplay: true,
+                prevArrow: $('.industries-section .industries-prev'),
+                nextArrow: $('.industries-section .industries-next'),
+                responsive: [
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        })(window.jQuery);
+    </script>
 </body>
 
 

@@ -1584,6 +1584,7 @@ body > * {
 
 .wrapper {
   position: relative;
+  background-color: #1a1a1a;
 }
 
 .section-padding {
@@ -5912,7 +5913,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 .brand-client .wapper-client .logo-box {
   position: relative;
-  background-color: #090909;
+  background-color: #1a1a1a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6507,6 +6508,14 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   margin-bottom: 28px;
 }
 
+.intro-about.our-story {
+  background-color: #1a1a1a;
+}
+
+.brand-client {
+  background-color: #1a1a1a;
+}
+
 .intro-about.our-story .one-title .title-main {
   white-space: normal !important;
   text-align: left;
@@ -6612,6 +6621,8 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   max-width: 100%;
   width: 100%;
   text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .intro-about .intro-content-text p[data-dsn-animate="animate"] > span {
@@ -6729,6 +6740,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
     margin-right: 0;
     max-width: 100%;
     width: 100%;
+    font-size: 17px;
   }
   .intro-about .background-mask {
     position: relative;
@@ -6774,6 +6786,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   .intro-about .intro-content-text p.intro-founded {
     margin-left: 0;
     margin-right: 0;
+    font-size: 16px;
   }
   .intro-about .background-mask {
     background-color: transparent;
@@ -6814,10 +6827,18 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   position: relative;
   overflow: hidden;
   z-index: 2;
+  background-color: #1a1a1a;
+}
+
+.our-services-2 .one-title.divisions-title {
+  width: 900px;
+  max-width: 100%;
 }
 
 .our-services-2 .one-title .division-intro {
   margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .our-services-2 .one-title.divisions-title .title-main,
@@ -6825,10 +6846,19 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   padding-left: 68px;
 }
 
+@media only screen and (max-width: 991px) {
+  .our-services-2 .one-title .division-intro {
+    font-size: 17px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .our-services-2 .one-title.divisions-title .title-main,
   .our-services-2 .one-title.divisions-title .division-intro {
     padding-left: 0;
+  }
+  .our-services-2 .one-title .division-intro {
+    font-size: 16px;
   }
   .our-services-2 .one-title.divisions-title .title-main {
     white-space: normal;

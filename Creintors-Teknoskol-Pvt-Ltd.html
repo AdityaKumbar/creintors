@@ -202,12 +202,19 @@
         .our-story .about-intro-text {
             padding-right: 30px;
         }
-        .our-story .about-intro-row p[data-dsn-animate] {
+        .our-story .about-intro-row .about-intro-copy {
             width: 100%;
             max-width: none;
-            line-height: 1.55;
+            font-size: 17px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 0 !important;
             max-width: 760px;
+        }
+        .dsn-slider .slide-content .slide-content-inner > p.hero-intro-copy {
+            font-size: 20px;
+            line-height: 1.6;
         }
         .our-story .about-intro-visual {
             display: flex;
@@ -275,6 +282,11 @@
             }
             .our-story .about-intro-text {
                 padding-right: 0;
+            }
+            .our-story .about-intro-row .about-intro-copy {
+                font-size: 15px;
+                line-height: 1.45;
+                letter-spacing: 0.01em;
             }
             .our-story .about-intro-visual {
                 justify-content: flex-start;
@@ -756,9 +768,94 @@
             background: rgba(255,255,255,0.9);
         }
         
+        @media only screen and (max-width: 991px) {
+            #dsn-scrollbar .scrollbar-track,
+            #dsn-scrollbar .scrollbar-thumb {
+                display: none !important;
+            }
+            .teknoskol-clients-grid .one-title .title-main {
+                white-space: normal !important;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+                max-width: 100%;
+            }
+        }
+
         @media only screen and (max-width: 768px) {
+            #dsn-scrollbar {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-right: 0 !important;
+                overflow-x: hidden !important;
+            }
+            #dsn-scrollbar .scroll-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-right: 0 !important;
+                padding-right: 0 !important;
+            }
+            .wrapper,
+            .wrapper > .container {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            .dsn-slider .slide-content .slide-content-inner {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .dsn-slider .slide-content .title-text-header .title-text-header-inner {
+                width: 100%;
+                max-width: 100%;
+            }
+            .dsn-slider .slide-content .title-text-header .title-text-header-inner .title-subtitle {
+                font-size: clamp(18px, 5.2vw, 23px) !important;
+                line-height: 1.2 !important;
+                margin-bottom: 8px !important;
+                white-space: normal !important;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+            .dsn-slider .slide-content .title-text-header .title-text-header-inner a {
+                font-size: clamp(36px, 11.5vw, 44px);
+                line-height: 1.08;
+                max-width: 100%;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+            .dsn-slider .slide-content .slide-content-inner > p {
+                max-width: 100%;
+                font-size: clamp(14px, 3.9vw, 16px);
+                line-height: 1.55;
+                letter-spacing: 0.01em;
+            }
+            .dsn-slider .slide-content .slide-content-inner > p.hero-intro-copy {
+                font-size: clamp(14px, 3.9vw, 16px);
+                line-height: 1.55;
+            }
+            .container.slider-project.section-margin {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+            .container.slider-project.section-margin > .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
             .slider-project .swiper-container {
                 min-height: 0;
+                max-width: 100%;
             }
             .slider-project .swiper-slide {
                 min-height: 0;
@@ -766,6 +863,7 @@
             }
             .slider-project .swiper-slide .row {
                 min-height: auto;
+                width: 100%;
             }
             .slider-project .swiper-slide .row > .col-md-6:first-child {
                 min-height: 300px;
@@ -818,9 +916,73 @@
             .slider-project .swiper-slide.product-slide-featured .product-image-col {
                 gap: 18px;
             }
+            .slider-project .one-title {
+                margin-bottom: 20px;
+            }
+            .slider-project .one-title .title-main {
+                font-size: clamp(38px, 10.2vw, 46px);
+                line-height: 1.08;
+            }
             .our-story .about-highlights-row .exper {
                 padding: 12px 14px;
                 min-height: 156px;
+            }
+            .our-story .about-highlights-row {
+                row-gap: 12px;
+                margin-top: 18px !important;
+            }
+            .our-story .about-highlights-row .exper .numb-ex {
+                margin-bottom: 8px;
+            }
+            .our-story .about-highlights-row .exper h4 {
+                font-size: 40px;
+                line-height: 1.15;
+                white-space: normal;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+            .ctpl-vm-inline {
+                padding: 58px 0;
+            }
+            .ctpl-vm-inline .vm-inline-subcopy {
+                margin-bottom: 24px;
+                line-height: 1.65;
+            }
+            .ctpl-vm-inline .ctpl-vm-card {
+                padding: 22px 18px;
+            }
+            #capabilities .capability-content h4 {
+                font-size: clamp(24px, 7.2vw, 30px);
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .our-story .about-highlights-row > [class*="col-"] {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .our-story .about-highlights-row .exper {
+                min-height: 0;
+                padding: 18px 18px;
+            }
+            .our-story .about-highlights-row {
+                row-gap: 14px;
+                margin-top: 20px !important;
+            }
+            .our-story .about-highlights-row .exper .numb-ex {
+                margin-bottom: 10px;
+            }
+            .our-story .about-highlights-row .exper h4 {
+                font-size: 34px;
+                line-height: 1.18;
+            }
+            .dsn-slider .slide-content .title-text-header .title-text-header-inner a {
+                font-size: clamp(34px, 12.5vw, 40px);
+                line-height: 1.06;
+            }
+            .dsn-slider .slide-content .slide-content-inner > p {
+                font-size: 14px;
+                line-height: 1.5;
             }
         }
 
@@ -1197,7 +1359,7 @@
                                                 <a href="Creintors-Teknoskol-Pvt-Ltd.html">Precision Valve Testing Systems</a>
                                             </div>
                                         </div>
-                                        <p>Creintors Teknosol Pvt Ltd designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
+                                        <p class="hero-intro-copy">Creintors Teknosol Pvt Ltd designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
                                         <!-- <div class="link-custom">
                                             <a href="#capabilities" class="image-zoom" data-dsn="parallax">
                                                 <span>Explore Our Capabilities</span>
@@ -1246,16 +1408,7 @@
                         <div class="inner">
                             <div class="row align-items-center about-intro-row">
                                 <div class="col-lg-7 about-intro-text">
-                                    <p data-dsn-animate="up">Creintors Teknosol specializes in engineering high-performance
-                                                            test rigs and validation systems that guarantee precision, reliability,
-                                                            and advanced analytics. From hydrostatic test rigs to electronic
-                                                            control and diagnostic benches, our solutions serve a wide range
-                                                            of industries including automotive, electrical, fluid power, and R&D.
-                                                            With in-house design, automation, and data integration expertise,
-                                                            we transform conventional testing into intelligent, efficient,
-                                                            and future-ready solutions.
-                                                            Whether it's for endurance, leakage, burst, or functional testing,
-                                                            CTPL delivers more than machines - we deliver confidence.</p>
+                                    <p class="about-intro-copy" data-dsn-animate="up">Creintors Teknosol engineers high-performance test rigs and validation systems built for precision and reliability. From hydrostatic rigs to electronic control and diagnostic benches, we support automotive, electrical, fluid-power, and R&amp;D applications. With in-house design, automation, and data integration, we deliver smarter testing systems that help teams validate faster and operate with confidence.</p>
                                 </div>
                                 <div class="col-lg-5 mt-4 mt-lg-0 about-intro-visual">
                                     <div class="about-rig-card image-zoom" data-dsn="parallax" data-dsn-animate="up">
@@ -1277,7 +1430,7 @@
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">Our Core Direction</p></div>
-                            <h2 class="title-main">Vision & Mission - CTPL</h2>
+                            <h2 class="title-main">Vision & Mission</h2>
                         </div>
                         <p class="vm-inline-subcopy" data-dsn-animate="up">Creintors Teknosol's purpose is rooted in dependable testing standards and trust-building engineering outcomes for every application we serve.</p>
 
@@ -1313,7 +1466,7 @@
                                 <article class="capability-card" data-dsn-animate="up">
                                     <div class="capability-media"><img src="assets/img/High pressure valve testing.png" alt="High Pressure Valve Testing"></div>
                                     <div class="capability-content">
-                                        <span class="capability-tag">Capability 01</span>
+                                        
                                         <h4>High Pressure Valve Testing</h4>
                                         <p>Shell and seat testing across demanding pressure envelopes with accurate instrumentation and repeatable validation cycles.</p>
                                     </div>
@@ -1323,7 +1476,7 @@
                                 <article class="capability-card" data-dsn-animate="up">
                                     <div class="capability-media"><img src="assets/img/leak detection system.png" alt="Leak Detection Systems"></div>
                                     <div class="capability-content">
-                                        <span class="capability-tag">Capability 02</span>
+                                       
                                         <h4>Leak Detection Systems</h4>
                                         <p>High sensitivity leak detection architecture for seat leakage, shell leakage, and performance verification under controlled conditions.</p>
                                     </div>
@@ -1333,7 +1486,7 @@
                                 <article class="capability-card" data-dsn-animate="up">
                                     <div class="capability-media"><img src="assets/img/peformance and endurance testing.png" alt="Performance and Endurance Testing"></div>
                                     <div class="capability-content">
-                                        <span class="capability-tag">Capability 03</span>
+                                        
                                         <h4>Performance and Endurance Testing</h4>
                                         <p>Engineered endurance cycles and dynamic operation profiles to assess long-term reliability before field use.</p>
                                     </div>
@@ -1343,7 +1496,7 @@
                                 <article class="capability-card" data-dsn-animate="up">
                                     <div class="capability-media"><img src="assets/img/automation and software integration.png" alt="Automation and Software"></div>
                                     <div class="capability-content">
-                                        <span class="capability-tag">Capability 04</span>
+                                        
                                         <h4>Automation and Software Integration</h4>
                                         <p>PLC, SCADA, GSM/IoT, and cloud-ready reporting for live test monitoring, traceability, and remote data access.</p>
                                     </div>

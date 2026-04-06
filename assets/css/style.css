@@ -10520,8 +10520,27 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   .dsn-slider .dsn-slider-content .slide-content .slide-content-inner {
     padding-left: 50px;
     padding-right: 50px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .dsn-slider .dsn-slider-content .slide-content .slide-content-inner p {
+    max-width: 100%;
+  }
+  .dsn-slider .dsn-slider-content .slide-content .slide-content-inner .title-text-header,
+  .dsn-slider .dsn-slider-content .slide-content .slide-content-inner .title-text-header .title-text-header-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+  .dsn-slider .dsn-slider-content .slide-content .slide-content-inner .title-text-header .title-text-header-inner a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .title-subtitle {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     max-width: 100%;
   }
   .dsn-slider .nav-slider {

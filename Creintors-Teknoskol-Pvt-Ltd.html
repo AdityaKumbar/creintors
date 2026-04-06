@@ -1242,6 +1242,17 @@
         }
 
         @media only screen and (max-width: 1200px) {
+            #dsn-scrollbar {
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow-x: hidden !important;
+            }
+            #dsn-scrollbar .scroll-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-right: 0 !important;
+                padding-right: 0 !important;
+            }
             .teknoskol-clients-grid .wapper-client {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
             }
@@ -1355,11 +1366,11 @@
                                     <div class="slide-content-inner">
                                         <div class="title-text-header">
                                             <div class="title-text-header-inner">
-                                                <p class="title-subtitle" style="font-size:25px !important;">Creintors Teknosol Pvt Ltd</p>
+                                                <p class="title-subtitle" style="font-size:25px !important;">Creintors Teknosol Pvt. Ltd.</p>
                                                 <a href="Creintors-Teknoskol-Pvt-Ltd.html">Precision Valve Testing Systems</a>
                                             </div>
                                         </div>
-                                        <p class="hero-intro-copy">Creintors Teknosol Pvt Ltd designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
+                                        <p class="hero-intro-copy">Creintors Teknosol Pvt. Ltd. designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
                                         <!-- <div class="link-custom">
                                             <a href="#capabilities" class="image-zoom" data-dsn="parallax">
                                                 <span>Explore Our Capabilities</span>
@@ -1979,6 +1990,12 @@
     <script src="assets/js/dsn-grid.js?v=20260317"></script>
     <script src="assets/js/custom.js?v=20260317"></script>
     <script src="assets/js/countup-init.js?v=20260317"></script>
+    <script>
+        (function () {
+            // Guard against stale nav state after AJAX/page transitions.
+            document.body.classList.remove('nav-active');
+        })();
+    </script>
     <script>
         (function () {
             var el = document.querySelector('.slider-project .swiper-container');

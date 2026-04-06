@@ -393,6 +393,27 @@
             padding-bottom: 68px !important;
         }
 
+        .box-gallery-vertical .mask-bg,
+        body.v-light .box-gallery-vertical .mask-bg {
+            background-color: #090909 !important;
+        }
+
+        body.v-light .box-gallery-vertical h3,
+        body.v-light .box-gallery-vertical h6,
+        body.v-light .box-gallery-vertical p {
+            color: #ffffff !important;
+        }
+
+        body.v-light .box-gallery-vertical .link-custom a {
+            color: #ffffff !important;
+            border-color: rgba(112, 112, 112, 0.35) !important;
+        }
+
+        body.v-light .box-gallery-vertical .link-custom a:before {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
         @media only screen and (max-width: 991px) {
             .between-section-separator {
                 margin-top: -28px;
@@ -434,6 +455,26 @@
         footer.footer .copright-text {
             font-size: 14px !important;
             letter-spacing: 0.04em;
+        }
+
+        .contact-up,
+        .contact-up::before,
+        .v-light .contact-up,
+        .v-light .contact-up::before {
+            background-color: #000000 !important;
+        }
+
+        .contact-up:hover::before {
+            background-color: #000000 !important;
+        }
+
+        .v-light .contact-up .c-wapp a .hiring {
+            -webkit-text-stroke: 1px #ffffff !important;
+        }
+
+        .v-light .contact-up .c-wapp a .career,
+        .v-light .contact-up:hover a .hiring {
+            color: #ffffff !important;
         }
     </style>
     <style>
@@ -485,6 +526,157 @@
 
             .index-clients-grid .wapper-client .logo-box img {
                 max-height: 72px;
+            }
+        }
+
+        .capabilities-section {
+            position: relative;
+            padding: 10px 0 6px;
+            background: #303030;
+            contain: layout paint;
+        }
+
+        .capabilities-section .capabilities-shell {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .capabilities-section .capabilities-title {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .capabilities-section .capabilities-title .title-sub,
+        .capabilities-section .capabilities-title .title-main {
+            color: #ffffff;
+        }
+
+        .capabilities-section .capabilities-title .title-sub-container {
+            justify-content: center;
+        }
+
+        .capabilities-section .capabilities-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .capabilities-section .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .capabilities-section .capability-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-height: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .capabilities-section .capability-card:hover {
+            border-color: rgba(0, 160, 230, 0.5);
+            box-shadow: 0 22px 40px rgba(0, 0, 0, 0.26);
+        }
+
+        .capabilities-section .capability-card .image {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+        }
+
+        .capabilities-section .capability-card .image::before {
+            opacity: 0.3;
+        }
+
+        .capabilities-section .capability-card .image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .capabilities-section .capability-card .content {
+            position: relative;
+            bottom: auto;
+            margin: 0;
+            padding: 22px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            text-align: left;
+            background: #090909;
+        }
+
+        .capabilities-section .capability-card .content .background {
+            display: none;
+        }
+
+        .capabilities-section .capability-card .content p,
+        .capabilities-section .capability-card .content h5,
+        .capabilities-section .capability-card .content .cta {
+            text-align: left;
+        }
+
+        .capabilities-section .capability-card .content h5 {
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(0, 160, 230, 0.95);
+        }
+
+        .capabilities-section .capability-card .content .cta {
+            margin-bottom: 8px;
+        }
+
+        .capabilities-section .capability-card .content .cta a {
+            font-size: 1.35rem;
+            line-height: 1.3;
+        }
+
+        .capabilities-section .capability-card .content p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        @media only screen and (max-width: 991px) {
+            .capabilities-section .capabilities-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 22px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .capabilities-section .capabilities-shell {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .capabilities-section .capabilities-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 18px;
+            }
+
+            .capabilities-section .capabilities-title {
+                margin-bottom: 28px;
+            }
+
+            .capabilities-section .capability-card .content .cta a {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -1516,7 +1708,7 @@
                     </div>
                 </section>
 
-                <div class=" box-gallery-vertical section-margin section-padding" data-dsn="color">
+                <div class=" box-gallery-vertical section-margin section-padding">
                     <div class="mask-bg"></div>
                     <div class="container">
                         <div class="row align-items-center h-100">
@@ -1556,18 +1748,18 @@
 
                 <div class="capabilities-separator" aria-hidden="true"></div>
 
-                <section class="our-news section-margin">
-                    <div class="container">
-                        <div class="one-title capabilities-title" data-dsn-animate="up">
+                <section class="section-margin capabilities-section">
+                    <div class="container capabilities-shell">
+                        <div class="one-title capabilities-title">
                             <div class="title-sub-container">
                                 <p class="title-sub">OUR CAPABILITIES</p>
                             </div>
                             <h2 class="title-main">Core Engineering Expertise</h2>
                         </div>
-                        <div class="custom-container">
-                            <div class="slick-slider">
-                                <div class="item-new slick-slide">
-                                    <div class="image" data-overlay="5">
+                        <div class="custom-container capabilities-container">
+                            <div class="capabilities-grid">
+                                <article class="capability-card">
+                                    <div class="image">
                                         <img src="assets/img/blog/precision.png" alt="">
                                     </div>
                                     <div class="content">
@@ -1581,10 +1773,10 @@
                                         <p>Advanced engineering design and manufacturing capabilities used to develop reliable industrial systems, valve testing rigs, and special purpose machines for critical applications.</p>
 
                                     </div>
-                                </div>
+                                </article>
 
-                                <div class="item-new slick-slide">
-                                    <div class="image" data-overlay="5">
+                                <article class="capability-card">
+                                    <div class="image">
                                         <img src="assets/img/blog/industry_automation.png" alt="">
                                     </div>
                                     <div class="content">
@@ -1597,10 +1789,10 @@
 
                                         <p>Smart automation solutions including ASRS systems, AGVs, and plant automation designed to improve efficiency, traceability, and operational productivity.</p>
                                     </div>
-                                </div>
+                                </article>
 
-                                <div class="item-new slick-slide">
-                                    <div class="image" data-overlay="5">
+                                <article class="capability-card">
+                                    <div class="image">
                                         <img src="assets/img/blog/environmental_sol.png" alt="">
                                     </div>
                                     <div class="content">
@@ -1614,7 +1806,7 @@
                                         <p>Advanced water and wastewater treatment systems including WTP, STP, and ETP technologies that support sustainable and compliant industrial operations.</p>
 
                                     </div>
-                                </div>
+                                </article>
 
                             </div>
                         </div>
@@ -1685,7 +1877,7 @@
                     </div>
                 </section>
 
-                <!-- <section class="contact-up section-margin section-padding">
+                <section class="contact-up section-margin section-padding">
                     <div class="container">
                         <div class="c-wapp">
                             <a href="contact.html" class="effect-ajax">
@@ -1698,7 +1890,7 @@
                             </a>
                         </div>
                     </div>
-                </section> -->
+                </section> 
 
             </div>
 

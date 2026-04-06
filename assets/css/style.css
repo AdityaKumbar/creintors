@@ -7045,7 +7045,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 @media only screen and (max-width: 991px) {
   .divisions-showcase .services-item img {
-    height: 240px !important;
+    height: 280px !important;
   }
 }
 
@@ -7053,11 +7053,17 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   .our-services-2 .services-item {
     padding: 30px 20px;
   }
+  .divisions-showcase .services-item {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .our-services-2 .services-item {
     margin: 0 15px 25px;
+  }
+  .divisions-showcase .services-item {
+    margin: 0 0 25px;
   }
 }
 

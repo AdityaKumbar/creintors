@@ -42,38 +42,148 @@
             max-width: 1080px;
             margin: 0 auto;
             min-height: 520px;
+            margin-left: 0;
+            margin-right: 0;
         }
         .slider-project.section-margin {
             margin-top: 20px;
             margin-bottom: 40px;
         }
         .capabilities-stats-row {
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin-top: 44px;
+            margin-bottom: 52px;
         }
-        #capabilities .item-new {
-            margin-right: 0;
+        #capabilities .capabilities-title {
+            margin-bottom: 16px;
         }
-        #capabilities .item-new .image {
-            height: 230px;
+        #capabilities .capabilities-intro {
+            max-width: 720px;
+            margin: 0 0 34px;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.8;
+        }
+        #capabilities .teknoskol-capabilities-grid {
+            row-gap: 30px;
+        }
+        #capabilities .capability-card {
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 18px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #06080b 0%, #050507 100%);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+        #capabilities .capability-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(39, 150, 201, 0.55);
+        }
+        #capabilities .capability-media {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
             background: #050505;
         }
-        #capabilities .item-new .image img {
+        #capabilities .capability-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(5, 5, 5, 0.08) 0%, rgba(5, 5, 5, 0.6) 100%);
+        }
+        #capabilities .capability-media img {
             width: 100%;
             height: 100%;
             display: block;
             object-fit: cover;
             object-position: center;
+            transition: transform 0.5s ease;
         }
-        #capabilities .row > .col-lg-6:nth-child(2) .item-new .image img {
+        #capabilities .capability-card:hover .capability-media img {
+            transform: scale(1.06);
+        }
+        #capabilities .teknoskol-capabilities-grid > .col-lg-6:nth-child(2) .capability-media img {
             object-position: center 42%;
         }
-        #capabilities.section-margin {
-            margin-bottom: 0 !important;
-            padding-bottom: 0;
+        #capabilities .capability-content {
+            padding: 24px 24px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        #capabilities .capabilities-stats-row {
-            margin-bottom: 0;
+        #capabilities .capability-tag {
+            display: inline-flex;
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(39, 150, 201, 0.45);
+            color: rgba(180, 222, 255, 0.9);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+        #capabilities .capability-content h4 {
+            margin: 0;
+            font-size: 31px;
+            line-height: 1.18;
+            color: #ffffff;
+        }
+        #capabilities .capability-content p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.74);
+            line-height: 1.75;
+        }
+        #capabilities .stat-tile {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 26px 14px 22px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.01);
+        }
+        #capabilities .stat-value {
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #ffffff;
+        }
+        #capabilities .stat-label {
+            margin: 12px 0 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.72);
+        }
+        @media only screen and (max-width: 991px) {
+            html,
+            body {
+                overflow-x: hidden;
+            }
+            #capabilities .capabilities-intro {
+                margin-bottom: 24px;
+            }
+            #capabilities .teknoskol-capabilities-grid {
+                row-gap: 20px;
+            }
+            #capabilities .capability-content {
+                padding: 20px;
+            }
+            #capabilities .capability-content h4 {
+                font-size: 27px;
+            }
+            .capabilities-stats-row {
+                margin-top: 30px;
+            }
+            #capabilities .stat-value {
+                font-size: 42px;
+            }
+        }
+        #capabilities.section-margin {
+            margin-bottom: 26px !important;
+            padding-bottom: 0;
         }
         .slider-project.section-margin {
             margin-top: 0 !important;
@@ -194,8 +304,9 @@
             object-fit: cover;
         }
         .slider-project .product-image-panel {
-            background: #050505 !important;
+            background: #1e1e1e !important;
             border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 16px !important;
             padding: 24px !important;
             min-height: 430px !important;
             display: flex !important;
@@ -213,7 +324,7 @@
             position: absolute !important;
             inset: 0 !important;
             background:
-                linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.62) 50%, rgba(5, 5, 5, 0.82)),
+                linear-gradient(90deg, rgba(58, 63, 71, 0.62), rgba(58, 63, 71, 0.42) 50%, rgba(58, 63, 71, 0.62)),
                 linear-gradient(110deg, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0) 72%) !important;
             background-size: 100% 100%, 170% 100% !important;
             background-position: 0 0, 0 0 !important;
@@ -228,6 +339,7 @@
             width: 100% !important;
             max-height: 380px !important;
             object-fit: contain !important;
+            border-radius: 12px !important;
             position: relative !important;
             z-index: 2 !important;
             animation: none !important;
@@ -925,6 +1037,48 @@
             filter: none;
         }
 
+        .contact-up,
+        .contact-up.section-padding {
+            background: #000000 !important;
+            background-image: none !important;
+        }
+        .contact-up .container,
+        .contact-up .c-wapp,
+        .contact-up .c-wapp a {
+            background: transparent !important;
+            background-image: none !important;
+        }
+        .contact-up::before,
+        .v-light .contact-up::before {
+            background-color: #000000 !important;
+        }
+
+        footer.footer .footer-block .footer-logo {
+            width: auto !important;
+        }
+        footer.footer .footer-block .footer-logo img {
+            max-width: 150px !important;
+            width: auto !important;
+            height: auto;
+            display: block;
+        }
+        footer.footer .footer-title {
+            font-size: 16px !important;
+            letter-spacing: 0.12em;
+        }
+        footer.footer .col-menu nav ul li a,
+        footer.footer .col-contact p,
+        footer.footer .col-address p {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            letter-spacing: 0.06em;
+        }
+        footer.footer .copyright p,
+        footer.footer .copright-text {
+            font-size: 14px !important;
+            letter-spacing: 0.04em;
+        }
+
         @media only screen and (max-width: 1200px) {
             .teknoskol-clients-grid .wapper-client {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1151,86 +1305,75 @@
                         <div class="one-title capabilities-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">WE TEST WHAT MATTERS MOST</p></div>
                             <h2 class="title-main">Industrial Testing Expertise</h2>
-                            </div>
+                        </div>
+                        <p class="capabilities-intro" data-dsn-animate="up">From precision pressure validation to software-integrated test ecosystems, we engineer every system for repeatable performance, traceability, and reliable field confidence.</p>
 
-                        <div class="row">
+                        <div class="row teknoskol-capabilities-grid">
                             <div class="col-lg-6 col-md-6">
-                                <div class="item-new">
-                                    <div class="image" data-overlay="5"><img src="assets/img/High pressure valve testing.png" alt="High Pressure Valve Testing"></div>
-                                    <div class="content">
-                                        <div class="background"></div>
-                                        
-                                        <div class="cta"><a href="#">High Pressure Valve Testing</a></div>
+                                <article class="capability-card" data-dsn-animate="up">
+                                    <div class="capability-media"><img src="assets/img/High pressure valve testing.png" alt="High Pressure Valve Testing"></div>
+                                    <div class="capability-content">
+                                        <span class="capability-tag">Capability 01</span>
+                                        <h4>High Pressure Valve Testing</h4>
                                         <p>Shell and seat testing across demanding pressure envelopes with accurate instrumentation and repeatable validation cycles.</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                <div class="item-new">
-                                    <div class="image" data-overlay="5"><img src="assets/img/leak detection system.png" alt="Leak Detection Systems"></div>
-                                    <div class="content">
-                                        <div class="background"></div>
-                                        
-                                        <div class="cta"><a href="#">Leak Detection Systems</a></div>
+                                <article class="capability-card" data-dsn-animate="up">
+                                    <div class="capability-media"><img src="assets/img/leak detection system.png" alt="Leak Detection Systems"></div>
+                                    <div class="capability-content">
+                                        <span class="capability-tag">Capability 02</span>
+                                        <h4>Leak Detection Systems</h4>
                                         <p>High sensitivity leak detection architecture for seat leakage, shell leakage, and performance verification under controlled conditions.</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                <div class="item-new">
-                                    <div class="image" data-overlay="5"><img src="assets/img/peformance and endurance testing.png" alt="Performance and Endurance Testing"></div>
-                                    <div class="content">
-                                        <div class="background"></div>
-                                        
-                                        <div class="cta"><a href="#">Performance and Endurance Testing</a></div>
+                                <article class="capability-card" data-dsn-animate="up">
+                                    <div class="capability-media"><img src="assets/img/peformance and endurance testing.png" alt="Performance and Endurance Testing"></div>
+                                    <div class="capability-content">
+                                        <span class="capability-tag">Capability 03</span>
+                                        <h4>Performance and Endurance Testing</h4>
                                         <p>Engineered endurance cycles and dynamic operation profiles to assess long-term reliability before field use.</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                <div class="item-new">
-                                    <div class="image" data-overlay="5"><img src="assets/img/automation and software integration.png" alt="Automation and Software"></div>
-                                    <div class="content">
-                                        <div class="background"></div>
-                                        
-                                        <div class="cta"><a href="#">Automation and Software Integration</a></div>
+                                <article class="capability-card" data-dsn-animate="up">
+                                    <div class="capability-media"><img src="assets/img/automation and software integration.png" alt="Automation and Software"></div>
+                                    <div class="capability-content">
+                                        <span class="capability-tag">Capability 04</span>
+                                        <h4>Automation and Software Integration</h4>
                                         <p>PLC, SCADA, GSM/IoT, and cloud-ready reporting for live test monitoring, traceability, and remote data access.</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         </div>
 
-                        <div class="row section-margin about-features-row" data-dsn-animate="up">
+                        <div class="row capabilities-stats-row about-features-row" data-dsn-animate="up">
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
-                                <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
-                                    <div>
-                                        <span class="count-up" data-target="1500" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">1500+</span>
-                                    </div>
-                                    <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Max Pressure (Bar)</h5>
+                                <div class="stat-tile">
+                                    <div><span class="count-up stat-value" data-target="1500" data-suffix="+">1500+</span></div>
+                                    <h5 class="stat-label">Max Pressure (Bar)</h5>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
-                                <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
-                                    <div>
-                                        <span class="count-up" data-target="56" data-suffix="&quot;" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">56&quot;</span>
-                                    </div>
-                                    <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Valve Size Capacity</h5>
+                                <div class="stat-tile">
+                                    <div><span class="count-up stat-value" data-target="56" data-suffix="&quot;">56&quot;</span></div>
+                                    <h5 class="stat-label">Valve Size Capacity</h5>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
-                                <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
-                                    <div>
-                                        <span class="count-up" data-target="7" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">7</span>
-                                    </div>
-                                    <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Product Categories</h5>
+                                <div class="stat-tile">
+                                    <div><span class="count-up stat-value" data-target="7">7</span></div>
+                                    <h5 class="stat-label">Product Categories</h5>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-12 mb-3">
-                                <div style="border:1px solid rgba(255,255,255,.2); padding:24px 16px; text-align:center; min-height:150px; display:flex; flex-direction:column; justify-content:center;">
-                                    <div>
-                                        <span class="count-up" data-target="10" data-suffix="+" style="font-weight:800; font-size:50px; line-height:1; letter-spacing:-1px; color:#fff;">10+</span>
-                                    </div>
-                                    <h5 style="margin:10px 0 0; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,.75);">Years of Expertise</h5>
+                                <div class="stat-tile">
+                                    <div><span class="count-up stat-value" data-target="10" data-suffix="+">10+</span></div>
+                                    <h5 class="stat-label">Years of Expertise</h5>
                                 </div>
                             </div>
                         </div>

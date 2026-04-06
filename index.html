@@ -410,6 +410,58 @@
             letter-spacing: 0.04em;
         }
     </style>
+    <style>
+        .index-clients-grid .wapper-client {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .index-clients-grid .wapper-client .logo-box {
+            width: 100%;
+            margin: 0;
+            min-height: 170px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            background-color: transparent;
+        }
+
+        .index-clients-grid .wapper-client .logo-box img {
+            width: auto !important;
+            height: auto !important;
+            max-width: 100% !important;
+            max-height: 96px;
+            object-fit: contain;
+            object-position: center;
+            filter: none;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .index-clients-grid .wapper-client {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .index-clients-grid .wapper-client {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .index-clients-grid .wapper-client .logo-box {
+                min-height: 130px;
+                padding: 14px;
+            }
+
+            .index-clients-grid .wapper-client .logo-box img {
+                max-height: 72px;
+            }
+        }
+    </style>
 </head>
 
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
@@ -1543,7 +1595,7 @@
                     </div>
                 </section>
 
-                <section class="brand-client section-margin">
+                <section class="brand-client section-margin index-clients-grid">
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
                             <div class="title-sub-container">
@@ -1554,7 +1606,7 @@
 
                         <div class="wapper-client">
                             <div class="logo-box">
-                                <img src="assets/img/logo/TVSLogo-hr.svg" alt="" style="width: 200px; height: auto;">
+                                <img src="assets/img/logo/TVSLogo-hr.svg" alt="">
                             </div>
 
                             <div class="logo-box">
@@ -1568,7 +1620,7 @@
                            
 
                             <div class="logo-box">
-                                <img src="assets/img/logo/tanishq-logo.jpg.jpeg" alt="" style="max-width: 250px !important; width: 250px !important; height: auto;">
+                                <img src="assets/img/logo/tanishq-logo.jpg.jpeg" alt="">
                             </div>
 
                              <div class="logo-box">
@@ -1576,7 +1628,7 @@
                             </div>
 
                             <div class="logo-box">
-                                <img src="assets/img/logo/technova-logo.jpg.jpeg" alt="" style="width: 200px; height: auto;">
+                                <img src="assets/img/logo/technova-logo.jpg.jpeg" alt="">
                             </div>
 
                             <div class="logo-box">
@@ -1584,13 +1636,13 @@
                             </div>
 
                             <div class="logo-box">
-                                <img src="assets/img/logo/L&T.png" alt=""style="max-width: 150px !important; width: 150px !important; height: auto;">
+                                <img src="assets/img/logo/L&T.png" alt="">
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="contact-up section-margin section-padding">
+                <!-- <section class="contact-up section-margin section-padding">
                     <div class="container">
                         <div class="c-wapp">
                             <a href="contact.html" class="effect-ajax">
@@ -1603,7 +1655,7 @@
                             </a>
                         </div>
                     </div>
-                </section>
+                </section> -->
 
             </div>
 

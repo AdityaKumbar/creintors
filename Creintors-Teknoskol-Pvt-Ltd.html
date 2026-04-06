@@ -895,6 +895,57 @@
                 margin-top: 44px !important;
             }
         }
+
+        .teknoskol-clients-grid .wapper-client {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .teknoskol-clients-grid .wapper-client .logo-box {
+            width: 100%;
+            margin: 0;
+            min-height: 170px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            background-color: transparent;
+        }
+
+        .teknoskol-clients-grid .wapper-client .logo-box img {
+            width: auto !important;
+            height: auto !important;
+            max-width: 100% !important;
+            max-height: 96px;
+            object-fit: contain;
+            object-position: center;
+            filter: none;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .teknoskol-clients-grid .wapper-client {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .teknoskol-clients-grid .wapper-client {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .teknoskol-clients-grid .wapper-client .logo-box {
+                min-height: 130px;
+                padding: 14px;
+            }
+
+            .teknoskol-clients-grid .wapper-client .logo-box img {
+                max-height: 72px;
+            }
+        }
     </style>
 </head>
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
@@ -1522,7 +1573,7 @@
 
                 
 
-                <section class="brand-client section-margin">
+                <section class="brand-client section-margin teknoskol-clients-grid">
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">Our Proud Associates</p></div>
@@ -1531,7 +1582,7 @@
                         <div class="wapper-client" data-dsn-animate="up">
                             <div class="logo-box"><img src="assets/img/logo/npcil_logo.png" alt="NPCIL"></div>
                             <div class="logo-box"><img src="assets/img/logo/flowserve_logo.png" alt="Flowserve"></div>
-                            <div class="logo-box"><img src="assets/img/logo/L&T.png" alt="L&T" style="max-width: 150px !important; width: 150px !important; height: auto;"></div>
+                            <div class="logo-box"><img src="assets/img/logo/L&T.png" alt="L&T"></div>
                             <div class="logo-box"><img src="assets/img/logo/azbil_logo-removebg-preview.png" alt="Azbil"></div>
                             <div class="logo-box"><img src="assets/img/logo/EmersonElectricLogo.png" alt="Emerson Electric"></div>
                             <div class="logo-box"><img src="assets/img/logo/Essar logo.png" alt="Essar"></div>

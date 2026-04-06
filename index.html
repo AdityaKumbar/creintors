@@ -436,6 +436,39 @@
                 padding-bottom: 46px !important;
             }
         }
+
+        @media only screen and (max-width: 360px) {
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .wrapper {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .box-gallery-vertical .box-info {
+                padding-top: 18px !important;
+            }
+
+            .box-gallery-vertical h6 {
+                margin-bottom: 12px;
+            }
+
+            .box-gallery-vertical .box-info > h3 {
+                margin-bottom: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .divisions-showcase .services-item img.division-logo-full {
+                object-fit: contain !important;
+                object-position: center center;
+                background: #f6f6f6;
+                padding: 8px;
+            }
+        }
     </style>
 
     <style>
@@ -1378,7 +1411,7 @@
                                 <div class="services-item">
                                     <div class="corner corner-top"></div>
                                     <div class="corner corner-bottom"></div>
-                                    <img src="assets/img/logo/3.jpg.jpeg" alt="">
+                                    <img class="division-logo-full" src="assets/img/logo/3.jpg.jpeg" alt="">
                                     <div class="division-caption">
                                         <span class="division-line"></span>
                                         <span class="division-name">Creintors Environmental Solutions Pvt. Ltd.</span>

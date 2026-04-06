@@ -245,6 +245,8 @@
             max-width: 760px;
             color: rgba(255, 255, 255, 0.72);
             margin-bottom: 34px;
+            font-size: 18px;
+            line-height: 1.75;
         }
 
         .vm-inline-group .vm-inline-card {
@@ -263,7 +265,10 @@
         }
 
         .vm-inline-group .vm-inline-card h4 {
-            font-size: 20px;
+            font-size: 28px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            line-height: 1.25;
             color: rgba(0, 160, 230, 1);
             margin-bottom: 14px;
         }
@@ -277,7 +282,8 @@
         .vm-inline-group .vm-inline-card p {
             margin: 0;
             color: rgba(255, 255, 255, 0.75);
-            line-height: 1.75;
+            font-size: 15px;
+            line-height: 1.9;
         }
 
         .vm-inline-group .vm-inline-meta {
@@ -311,6 +317,22 @@
             margin-bottom: 5px;
             letter-spacing: 0.14em;
             text-transform: uppercase;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .vm-inline-group .vm-inline-lead {
+                font-size: 17px;
+            }
+
+            .vm-inline-group .vm-inline-card h4 {
+                font-size: 24px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .vm-inline-group .vm-inline-lead {
+                font-size: 16px;
+            }
         }
 
         /* Keep page container in sync with light theme toggle on data-dsn="color" sections */
@@ -369,6 +391,25 @@
         }
     </style>
 
+    <style>
+        /* Footer font size overrides */
+        footer.footer .footer-title {
+            font-size: 16px !important;
+            letter-spacing: 0.12em;
+        }
+        footer.footer .col-menu nav ul li a,
+        footer.footer .col-contact p,
+        footer.footer .col-address p {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            letter-spacing: 0.06em;
+        }
+        footer.footer .copyright p,
+        footer.footer .copright-text {
+            font-size: 14px !important;
+            letter-spacing: 0.04em;
+        }
+    </style>
 </head>
 
 <body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
@@ -498,8 +539,8 @@
                                             </div>
                                         </div>
 
-                                        <p>THE CREINTORS - the think tank of ideas - are a technology oriented company with a well- established team of self-
-                                            motivated Engineers. Our team-work, dedicated approach and full understanding of the adage - only Change is
+                                        <p>THE CREINTORS - think tank of ideas are a technology oriented company with a well established team of self
+                                            motivated engineers. Our team-work, dedicated approach and full understanding of the adage - only change is
                                             constant, fuels us to work for</p>
                                         <div class="link-custom">
                                             <a href="project-9.html" class="image-zoom effect-ajax" data-dsn="parallax"

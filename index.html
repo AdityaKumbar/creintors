@@ -242,6 +242,12 @@
         }
 
         @media only screen and (max-width: 767px) {
+            .industries-section .industries-slider-nav {
+                left: 12px;
+                right: 12px;
+                width: auto;
+            }
+
             .industries-section button.industries-slider-btn {
                 width: 42px;
                 height: 42px;
@@ -258,12 +264,13 @@
             }
 
             .industries-section .industries-prev {
-                left: auto;
-                right: 52px;
+                left: 0;
+                right: auto;
             }
 
             .industries-section .industries-next {
-                right: 10px;
+                right: 0;
+                left: auto;
             }
         }
     </style>
@@ -1402,22 +1409,24 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="services-item">
-                                    <div class="corner corner-top"></div>
-                                    <div class="corner corner-bottom"></div>
-                                    <img src="assets/img/logo/1 (1).jpg.jpeg" alt="">
-                                    <div class="division-caption">
-                                        <span class="division-line"></span>
-                                        <span class="division-name">Creintors Teknosol Pvt. Ltd.</span>
+                                <a href="Creintors-Teknoskol-Pvt-Ltd.html" style="display: block; color: inherit; text-decoration: none;">
+                                    <div class="services-item">
+                                        <div class="corner corner-top"></div>
+                                        <div class="corner corner-bottom"></div>
+                                        <img src="assets/img/logo/1 (1).jpg.jpeg" alt="">
+                                        <div class="division-caption">
+                                            <span class="division-line"></span>
+                                            <span class="division-name">Creintors Teknosol Pvt. Ltd.</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="services-item selected">
                                     <div class="corner corner-top"></div>
                                     <div class="corner corner-bottom"></div>
-                                    <img src="assets/img/logo/2.jpg.jpeg" alt="">
+                                    <img class="division-logo-automation" src="assets/img/logo/2.jpg.jpeg" alt="">
                                     <div class="division-caption">
                                         <span class="division-line"></span>
                                         <span class="division-name">Creintors Automation Solutions Pvt. Ltd.</span>

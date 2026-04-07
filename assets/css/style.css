@@ -7065,6 +7065,14 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   .divisions-showcase .services-item {
     margin: 0 0 25px;
   }
+  .divisions-showcase .services-item img.division-logo-automation {
+    height: auto !important;
+    max-height: none !important;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+  }
 }
 
 .our-services-2 .services-item .corner {

@@ -17,6 +17,7 @@
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
@@ -747,6 +748,176 @@
             opacity: 1;
             visibility: visible;
             top: 15px;
+        }
+    </style>
+    <style>
+        .contact-float-sidebar {
+            --cfs-size: 56px;
+            --cfs-gap: 14px;
+            --cfs-label-bg: #1458cc;
+            --cfs-label-color: #ffffff;
+            --cfs-btn-location: #0d96dd;
+            --cfs-btn-whatsapp: #2bb741;
+            --cfs-btn-call: #1f2f86;
+            --cfs-btn-support: #1458cc;
+            position: fixed;
+            bottom: 28px;
+            left: 18px;
+            transform: none;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            gap: var(--cfs-gap);
+        }
+
+        .contact-float-sidebar .cfs-item {
+            position: relative;
+            width: var(--cfs-size);
+            height: var(--cfs-size);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            line-height: 1;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-float-sidebar .cfs-label {
+            position: absolute;
+            left: calc(var(--cfs-size) + 10px);
+            right: auto;
+            white-space: nowrap;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: var(--cfs-label-bg);
+            color: var(--cfs-label-color);
+            font-size: 17px;
+            line-height: 1;
+            font-weight: 600;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+            transform: translateX(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease, visibility 0.24s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .contact-float-sidebar .cfs-icon-wrap {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 26px;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+            transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .contact-float-sidebar .cfs-item:hover .cfs-label,
+        .contact-float-sidebar .cfs-item:focus-visible .cfs-label {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-float-sidebar .cfs-item:hover .cfs-icon-wrap,
+        .contact-float-sidebar .cfs-item:focus-visible .cfs-icon-wrap {
+            transform: scale(1.08);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+        }
+
+        .contact-float-sidebar .cfs-item-location .cfs-icon-wrap { background: var(--cfs-btn-location); }
+        .contact-float-sidebar .cfs-item-whatsapp .cfs-icon-wrap { background: var(--cfs-btn-whatsapp); }
+        .contact-float-sidebar .cfs-item-call .cfs-icon-wrap { background: var(--cfs-btn-call); }
+        .contact-float-sidebar .cfs-item-support .cfs-icon-wrap { background: var(--cfs-btn-support); }
+
+        .contact-float-sidebar .cfs-item::before,
+        .contact-float-sidebar .cfs-item::after,
+        .contact-float-sidebar .cfs-icon-wrap::before,
+        .contact-float-sidebar .cfs-icon-wrap::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .contact-float-sidebar.is-collapsed .cfs-expandable {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(14px) scale(0.92);
+            max-height: 0;
+            margin: 0;
+            overflow: hidden;
+            transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease, visibility 0.24s ease, max-height 0.34s ease, margin 0.34s ease;
+        }
+
+        .contact-float-sidebar.is-open .cfs-expandable {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+            max-height: 80px;
+            overflow: visible;
+        }
+
+        .contact-float-sidebar .cfs-expandable:nth-child(1) { transition-delay: 0s; }
+        .contact-float-sidebar .cfs-expandable:nth-child(2) { transition-delay: 0.04s; }
+        .contact-float-sidebar .cfs-expandable:nth-child(3) { transition-delay: 0.08s; }
+
+        .contact-float-sidebar .cfs-item-support {
+            cursor: pointer;
+            font: inherit;
+            appearance: none;
+            -webkit-appearance: none;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: var(--cfs-size) !important;
+            height: var(--cfs-size) !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            line-height: 1 !important;
+            min-width: 0 !important;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .contact-float-sidebar {
+                --cfs-size: 50px;
+                --cfs-gap: 10px;
+                bottom: 14px;
+                left: 10px;
+            }
+
+            .contact-float-sidebar .cfs-icon-wrap {
+                font-size: 22px;
+            }
+
+            .contact-float-sidebar .cfs-label {
+                font-size: 16px;
+                padding: 7px 10px;
+                left: calc(var(--cfs-size) + 8px);
+                right: auto;
+            }
+        }
+
+        @media only screen and (max-width: 991px) and (min-width: 768px) {
+            .contact-float-sidebar {
+                left: 16px;
+            }
         }
     </style>
 </head>
@@ -2042,6 +2213,24 @@
         </div>
     </main>
 
+    <aside class="contact-float-sidebar is-collapsed" id="contactFloatSidebar" aria-label="Quick contact actions">
+        <a class="cfs-item cfs-item-location cfs-expandable" href="https://maps.google.com/?q=Survey+No.22/3,+Waghawade+Road,+Belgaum,+Karnataka+590018" target="_blank" rel="noopener" aria-label="Location">
+            <span class="cfs-label">Location</span>
+            <span class="cfs-icon-wrap"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+        </a>
+        <a class="cfs-item cfs-item-whatsapp cfs-expandable" href="https://wa.me/917019224122" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <span class="cfs-label">WhatsApp</span>
+            <span class="cfs-icon-wrap"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+        </a>
+        <a class="cfs-item cfs-item-call cfs-expandable" href="tel:+917019224122" aria-label="Call Us">
+            <span class="cfs-label">Call Us</span>
+            <span class="cfs-icon-wrap"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+        </a>
+        <button class="cfs-item cfs-item-support" id="contactFloatToggle" type="button" aria-label="Support" aria-expanded="false" aria-controls="contactFloatSidebar">
+            <span class="cfs-icon-wrap"><i class="fa-solid fa-headset" aria-hidden="true"></i></span>
+        </button>
+    </aside>
+
     <!-- Wait Loader -->
     <div class="wait-loader">
         <div class="loader-inner">
@@ -2112,6 +2301,33 @@
                 ]
             });
         })(window.jQuery);
+    </script>
+    <script>
+        (function () {
+            var sidebar = document.getElementById('contactFloatSidebar');
+            var toggle = document.getElementById('contactFloatToggle');
+            if (!sidebar || !toggle) return;
+
+            function setOpenState(isOpen) {
+                sidebar.classList.toggle('is-open', isOpen);
+                sidebar.classList.toggle('is-collapsed', !isOpen);
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+
+            toggle.addEventListener('click', function () {
+                setOpenState(!sidebar.classList.contains('is-open'));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!sidebar.contains(event.target)) setOpenState(false);
+            });
+
+            sidebar.querySelectorAll('.cfs-expandable').forEach(function (item) {
+                item.addEventListener('click', function () {
+                    setOpenState(false);
+                });
+            });
+        })();
     </script>
     <script>
         (function ($) {

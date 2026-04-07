@@ -1989,7 +1989,6 @@
     <script src="assets/js/plugins.js?v=20260317"></script>
     <script src="assets/js/dsn-grid.js?v=20260317"></script>
     <script src="assets/js/custom.js?v=20260317"></script>
-    <script src="assets/js/countup-init.js?v=20260317"></script>
     <script>
         (function () {
             // Guard against stale nav state after AJAX/page transitions.
@@ -2063,16 +2062,33 @@
         (function () {
             var counters = document.querySelectorAll('.count-up');
             if (!counters.length) return;
+            var scrollRoot = document.querySelector('#dsn-scrollbar') || null;
+
+            var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function setFinal(el) {
+                var target = parseInt(el.getAttribute('data-target') || '0', 10);
+                var suffix = el.getAttribute('data-suffix') || '';
+                var finalLabel = el.getAttribute('data-final-label') || '';
+                el.innerHTML = finalLabel || (target + suffix);
+            }
 
             function animateCounter(el) {
-                if (el.dataset.done === '1') return;
-                el.dataset.done = '1';
+                if (!el || el.dataset.countAnimated === '1') return;
+                el.dataset.countAnimated = '1';
+
+                if (prefersReducedMotion) {
+                    setFinal(el);
+                    return;
+                }
 
                 var target = parseInt(el.getAttribute('data-target') || '0', 10);
                 var suffix = el.getAttribute('data-suffix') || '';
                 var finalLabel = el.getAttribute('data-final-label') || '';
-                var duration = 1400;
+                var duration = parseInt(el.getAttribute('data-duration') || '1400', 10);
                 var start = null;
+
+                el.textContent = '0' + suffix;
 
                 function tick(timestamp) {
                     if (!start) start = timestamp;
@@ -2082,30 +2098,47 @@
 
                     if (progress < 1) {
                         requestAnimationFrame(tick);
-                    } else if (finalLabel) {
+                        return;
+                    }
+
+                    if (finalLabel) {
                         el.innerHTML = finalLabel;
+                    } else {
+                        el.textContent = target + suffix;
                     }
                 }
 
                 requestAnimationFrame(tick);
             }
 
-            if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) animateCounter(entry.target);
-                    });
-                }, { threshold: 0.4 });
+            counters.forEach(function (counter) {
+                var suffix = counter.getAttribute('data-suffix') || '';
+                counter.textContent = '0' + suffix;
+            });
 
-                counters.forEach(function (counter) { observer.observe(counter); });
-
-                // Fallback: ensure counters don't stay at 0 if observer misses.
-                setTimeout(function () {
-                    counters.forEach(animateCounter);
-                }, 900);
-            } else {
-                counters.forEach(animateCounter);
+            function maybeAnimateVisible() {
+                counters.forEach(function (counter) {
+                    if (counter.dataset.countAnimated === '1') return;
+                    var rect = counter.getBoundingClientRect();
+                    var vh = window.innerHeight || document.documentElement.clientHeight;
+                    if (rect.top < vh * 0.9 && rect.bottom > vh * 0.1) {
+                        animateCounter(counter);
+                    }
+                });
             }
+
+            maybeAnimateVisible();
+            (scrollRoot || window).addEventListener('scroll', maybeAnimateVisible, { passive: true });
+            window.addEventListener('resize', maybeAnimateVisible, { passive: true });
+
+            // Some smooth-scroll themes animate via transforms without native scroll events.
+            var safetyPoll = setInterval(function () {
+                maybeAnimateVisible();
+                var remaining = Array.prototype.some.call(counters, function (counter) {
+                    return counter.dataset.countAnimated !== '1';
+                });
+                if (!remaining) clearInterval(safetyPoll);
+            }, 300);
         })();
     </script>
 </body>

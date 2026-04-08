@@ -543,6 +543,46 @@
             gap: 14px;
         }
 
+        .index-clients-grid {
+            position: relative;
+            background-color: #B6D9E8;
+            margin-bottom: 0;
+            padding-bottom: 120px;
+            border-top: 0 !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+        }
+
+        .index-clients-grid::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 3px;
+            background: #B6D9E8;
+            pointer-events: none;
+        }
+
+        .index-clients-grid .title-sub,
+        .index-clients-grid .title-main {
+            color: #000000 !important;
+        }
+
+        .index-clients-grid .title-sub::before,
+        .capabilities-section .title-sub::before {
+            background-color: #000000 !important;
+        }
+
+        .index-clients-grid .title-sub::after,
+        .capabilities-section .title-sub::after {
+            background: #000000 !important;
+        }
+
+        .index-clients-grid + .contact-up.section-margin {
+            margin-top: 0;
+        }
+
         .index-clients-grid .wapper-client .logo-box {
             width: 100%;
             margin: 0;
@@ -551,9 +591,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 12px;
-            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .index-clients-grid .wapper-client .logo-box img {
@@ -588,11 +629,35 @@
             }
         }
 
+        @media only screen and (max-width: 991px) {
+            .index-clients-grid {
+                padding-bottom: 80px;
+            }
+
+            .capabilities-section {
+                padding-bottom: 80px;
+            }
+        }
+
         .capabilities-section {
             position: relative;
             padding: 10px 0 6px;
-            background: #303030;
+            background: #B6D9E8;
             contain: layout paint;
+            margin-bottom: 0;
+            padding-bottom: 120px;
+            border-bottom: 0 !important;
+        }
+
+        .capabilities-section + .index-clients-grid.section-margin {
+            margin-top: 0;
+            border-top: 0 !important;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .capabilities-section {
+                padding-bottom: 80px;
+            }
         }
 
         .capabilities-section .capabilities-shell {
@@ -609,7 +674,7 @@
 
         .capabilities-section .capabilities-title .title-sub,
         .capabilities-section .capabilities-title .title-main {
-            color: #ffffff;
+            color: #000000;
         }
 
         .capabilities-section .capabilities-title .title-sub-container {
@@ -2086,7 +2151,7 @@
                             </div>
 
                              <div class="logo-box">
-                                <img src="assets/img/logo/VEGA_NEW_LOGO.avif" alt="">
+                                <img src="assets/img/logo/vega logo.jpg" alt="">
                             </div>
 
                             <div class="logo-box">

@@ -512,6 +512,22 @@
                 padding: 8px;
             }
         }
+
+        /* Divisions cards: tame heavy shadow band */
+        .divisions-showcase .services-item {
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+        }
+
+        .divisions-showcase .services-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 22px rgba(15, 23, 42, 0.18);
+        }
+
+        /* Override theme's even-card shadow on middle division card */
+        .divisions-showcase .col-md-4:nth-of-type(even) .services-item,
+        .v-light .divisions-showcase .col-md-4:nth-of-type(even) .services-item {
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14) !important;
+        }
     </style>
 
     <style>
@@ -1105,6 +1121,12 @@
             background-color: #000000 !important;
         }
 
+        /* Keep hero slider counter in original ghosted style */
+        main.main-root .dsn-slider .footer-slid .control-num span {
+            color: rgba(255, 255, 255, 0.03) !important;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.11) !important;
+        }
+
         /* Uniform spacing between all content blocks */
         main.main-root .section-margin {
             margin-top: var(--index-section-gap) !important;
@@ -1225,6 +1247,125 @@
 
             main.main-root .box-seat.box-seat-full .pro-text .link-custom a:before {
                 margin: 8px 10px !important;
+            }
+        }
+    </style>
+    <style>
+        /* Contact CTA: aligned to current light-blue/black theme */
+        main.main-root .contact-up.contact-cta {
+            background-color: #b6d9e8 !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.14);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+            overflow: hidden;
+            transition: background-color 0.35s ease;
+        }
+
+        main.main-root .contact-up.contact-cta::before {
+            display: none !important;
+        }
+
+        main.main-root .contact-up.contact-cta .c-wapp a.contact-cta-link {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 28px;
+            min-height: 120px;
+            padding: 18px clamp(22px, 5vw, 72px);
+            position: relative;
+        }
+
+        main.main-root .contact-up.contact-cta .c-wapp a.contact-cta-link::after {
+            content: "";
+            position: absolute;
+            left: clamp(22px, 5vw, 72px);
+            right: clamp(22px, 5vw, 72px);
+            bottom: 28px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.22);
+            transform: scaleX(0.2);
+            transform-origin: left center;
+            transition: transform 0.35s ease, background-color 0.35s ease;
+        }
+
+        main.main-root .contact-up.contact-cta .c-wapp a .hiring {
+            width: auto;
+            margin: 0;
+            text-align: left;
+            color: #000000 !important;
+            -webkit-text-stroke: 0 !important;
+            text-shadow: none !important;
+            font-size: clamp(2rem, 5vw, 3.9rem);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            transition: letter-spacing 0.35s ease;
+        }
+
+        main.main-root .contact-up.contact-cta .c-wapp a .career {
+            width: auto;
+            margin: 0;
+            text-align: right;
+            color: #000000 !important;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        main.main-root .contact-up.contact-cta:hover,
+        main.main-root .contact-up.contact-cta:focus-within {
+            background-color: #aecfe0 !important;
+        }
+
+        main.main-root .contact-up.contact-cta:hover .contact-cta-link::after,
+        main.main-root .contact-up.contact-cta:focus-within .contact-cta-link::after {
+            transform: scaleX(1);
+            background-color: rgba(0, 0, 0, 0.45);
+        }
+
+        main.main-root .contact-up.contact-cta:hover .hiring,
+        main.main-root .contact-up.contact-cta:focus-within .hiring {
+            letter-spacing: 0.03em;
+        }
+
+        main.main-root .contact-up.contact-cta:hover .career,
+        main.main-root .contact-up.contact-cta:focus-within .career {
+            transform: translateX(-4px);
+            opacity: 0.9;
+        }
+
+        main.main-root .contact-up.contact-cta .contact-cta-link:focus-visible {
+            outline: 2px solid #000000;
+            outline-offset: -2px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            main.main-root .contact-up.contact-cta .c-wapp a.contact-cta-link {
+                grid-template-columns: 1fr;
+                justify-items: start;
+                gap: 14px;
+                min-height: 0;
+                padding: 16px 22px;
+            }
+
+            main.main-root .contact-up.contact-cta .c-wapp a.contact-cta-link::after {
+                left: 22px;
+                right: 22px;
+                bottom: 20px;
+            }
+
+            main.main-root .contact-up.contact-cta .c-wapp a .hiring,
+            main.main-root .contact-up.contact-cta .c-wapp a .career {
+                width: auto;
+                text-align: left;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            main.main-root .contact-up.contact-cta,
+            main.main-root .contact-up.contact-cta .contact-cta-link::after,
+            main.main-root .contact-up.contact-cta .hiring,
+            main.main-root .contact-up.contact-cta .career {
+                transition: none;
             }
         }
     </style>
@@ -2522,10 +2663,10 @@
                     </div>
                 </section>
 
-                <section class="contact-up section-margin section-padding">
+                <section class="contact-up contact-cta section-margin section-padding">
                     <div class="container">
                         <div class="c-wapp">
-                            <a href="contact.html" class="effect-ajax">
+                            <a href="contact.html" class="effect-ajax contact-cta-link">
                                 <span class="hiring">
                                     Innovate With Us
                                 </span>

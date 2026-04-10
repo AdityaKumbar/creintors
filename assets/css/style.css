@@ -5930,10 +5930,12 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   margin-right: 2px;
   margin-bottom: 2px;
   overflow: hidden;
+  border: 0.5px solid #000000;
 }
 
 .v-light .brand-client .wapper-client .logo-box {
   background-color: #e6e6e6;
+  border-color: #000000;
 }
 
 @media only screen and (max-width: 767px) {

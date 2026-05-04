@@ -13704,3 +13704,31 @@ footer .copyright-social ul li:last-child {
 
 /*# sourceMappingURL=style.css.map */
 
+/* Typography override */
+body,
+body p,
+body li,
+body a,
+body span,
+body label,
+body input,
+body select,
+body optgroup,
+body textarea,
+body button,
+body dt,
+body dd,
+body blockquote,
+body cite {
+  font-family: Ebrima, "Segoe UI", sans-serif !important;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: Cambria, Georgia, serif !important;
+}
+

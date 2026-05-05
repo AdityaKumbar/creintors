@@ -813,6 +813,28 @@
             border-color: rgba(0, 0, 0, 0.2);
             background: rgba(255, 255, 255, 0.35);
         }
+
+        body,
+        .main-root,
+        #dsn-scrollbar,
+        #dsn-scrollbar .scroll-content,
+        .wrapper {
+            background-color: #b0e0e6 !important;
+        }
+
+        .wrapper > section.section-margin,
+        .wrapper > div.section-margin {
+            background-color: #b0e0e6;
+        }
+
+        #dsn-scrollbar .scrollbar-track {
+            background-color: #b0e0e6 !important;
+        }
+
+        #dsn-scrollbar .scrollbar-thumb {
+            background-color: #b0e0e6 !important;
+            border-color: #b0e0e6 !important;
+        }
         
         @media only screen and (max-width: 991px) {
             #dsn-scrollbar .scrollbar-track,
@@ -1344,6 +1366,11 @@
         .contact-up.section-padding {
             background: #b6d9e8 !important;
             background-image: none !important;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .contact-up.section-margin + footer.footer {
+            margin-top: 0 !important;
         }
         .contact-up .container,
         .contact-up .c-wapp,

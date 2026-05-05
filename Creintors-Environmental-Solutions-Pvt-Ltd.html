@@ -133,6 +133,156 @@
             color: rgba(255, 255, 255, 0.74);
             line-height: 1.75;
         }
+        #extended-process-sections,
+        #distribution-automation-systems,
+        #advanced-polishing-sustainability {
+            position: relative;
+        }
+        #extended-process-sections .capabilities-title,
+        #distribution-automation-systems .capabilities-title,
+        #advanced-polishing-sustainability .capabilities-title {
+            margin-bottom: 16px;
+        }
+        #extended-process-sections .title-sub,
+        #distribution-automation-systems .title-sub,
+        #advanced-polishing-sustainability .title-sub {
+            color: #0e8f25;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+        #extended-process-sections .title-main,
+        #distribution-automation-systems .title-main,
+        #advanced-polishing-sustainability .title-main {
+            color: #0f1f18;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.12;
+        }
+        #extended-process-sections .capabilities-intro,
+        #distribution-automation-systems .capabilities-intro,
+        #advanced-polishing-sustainability .capabilities-intro {
+            max-width: 900px;
+            margin: 0 0 34px;
+            color: #2f3d35;
+            line-height: 1.75;
+            font-size: 21px;
+            font-weight: 500;
+        }
+        #extended-process-sections .teknoskol-capabilities-grid,
+        #distribution-automation-systems .teknoskol-capabilities-grid,
+        #advanced-polishing-sustainability .teknoskol-capabilities-grid {
+            row-gap: 30px;
+        }
+        #extended-process-sections .capability-card,
+        #distribution-automation-systems .capability-card,
+        #advanced-polishing-sustainability .capability-card {
+            height: 100%;
+            border: 1px solid rgba(14, 143, 37, 0.22);
+            border-radius: 18px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #f8fff8 0%, #eef8ee 100%);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+        #extended-process-sections .capability-card:hover,
+        #distribution-automation-systems .capability-card:hover,
+        #advanced-polishing-sustainability .capability-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(14, 143, 37, 0.62);
+            box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+        }
+        #extended-process-sections .capability-media,
+        #distribution-automation-systems .capability-media,
+        #advanced-polishing-sustainability .capability-media {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background: #dfeadf;
+        }
+        #extended-process-sections .capability-media::after,
+        #distribution-automation-systems .capability-media::after,
+        #advanced-polishing-sustainability .capability-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 34, 17, 0.05) 0%, rgba(10, 34, 17, 0.32) 100%);
+            transition: opacity 0.35s ease;
+        }
+        #extended-process-sections .capability-media img,
+        #distribution-automation-systems .capability-media img,
+        #advanced-polishing-sustainability .capability-media img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.55s ease, filter 0.35s ease;
+        }
+        #extended-process-sections .capability-card:hover .capability-media img,
+        #distribution-automation-systems .capability-card:hover .capability-media img,
+        #advanced-polishing-sustainability .capability-card:hover .capability-media img {
+            transform: scale(1.08);
+            filter: saturate(1.08);
+        }
+        #extended-process-sections .capability-content,
+        #distribution-automation-systems .capability-content,
+        #advanced-polishing-sustainability .capability-content {
+            padding: 24px 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        #extended-process-sections .capability-content h4,
+        #distribution-automation-systems .capability-content h4,
+        #advanced-polishing-sustainability .capability-content h4 {
+            margin: 0;
+            font-size: 34px;
+            line-height: 1.14;
+            color: #0e8f25;
+        }
+        #extended-process-sections .capability-content p,
+        #distribution-automation-systems .capability-content p,
+        #advanced-polishing-sustainability .capability-content p {
+            margin: 0;
+            color: #27362e;
+            line-height: 1.72;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        @media (max-width: 991px) {
+            #extended-process-sections .capabilities-intro,
+            #distribution-automation-systems .capabilities-intro,
+            #advanced-polishing-sustainability .capabilities-intro {
+                font-size: 19px;
+            }
+            #extended-process-sections .capability-content h4,
+            #distribution-automation-systems .capability-content h4,
+            #advanced-polishing-sustainability .capability-content h4 {
+                font-size: 30px;
+            }
+            #extended-process-sections .capability-content p,
+            #distribution-automation-systems .capability-content p,
+            #advanced-polishing-sustainability .capability-content p {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 767px) {
+            #extended-process-sections .title-main,
+            #distribution-automation-systems .title-main,
+            #advanced-polishing-sustainability .title-main {
+                font-size: 30px;
+            }
+            #extended-process-sections .capability-content h4,
+            #distribution-automation-systems .capability-content h4,
+            #advanced-polishing-sustainability .capability-content h4 {
+                font-size: 26px;
+            }
+            #extended-process-sections .capability-content p,
+            #distribution-automation-systems .capability-content p,
+            #advanced-polishing-sustainability .capability-content p {
+                font-size: 17px;
+                line-height: 1.66;
+            }
+        }
         #capabilities .stat-tile {
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 14px;
@@ -1974,6 +2124,67 @@
                         </div>
 
                        
+                    </div>
+                </section>
+
+
+                <section class="our-news section-margin" id="extended-process-sections">
+                    <div class="container">
+                        <div class="one-title capabilities-title" data-dsn-animate="up">
+                            <div class="title-sub-container"><p class="title-sub">PROCESS CATEGORY 01</p></div>
+                            <h2 class="title-main">Core Treatment Processes</h2>
+                        </div>
+                        <p class="capabilities-intro" data-dsn-animate="up">Primary treatment blocks that handle separation, settling, mixing and core process conditioning for stable downstream performance.</p>
+
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/cespl images/solid-liquid separation unit.png" alt="Solid Liquid Separation Unit"></div><div class="capability-content"><h4>Solid Liquid Separation Unit</h4><p>Dewatering-focused systems for sludge handling and disposal reduction, including Rotary Drum Filter, Centrifuge and Hydrocyclone options.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l5.jpg" alt="Sedimentation"></div><div class="capability-content"><h4>Sedimentation</h4><p>Settling-based suspended particle removal systems including Clariflocculators, High Rate Clarifiers and DAF-integrated settling modules.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l12.jpg" alt="Mixing"></div><div class="capability-content"><h4>Mixing</h4><p>Application-matched mixing systems such as pressured water jets, inline static mixers, hydraulic mixers and mechanical mixers.</p></div></article></div>
+                        </div>
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l13.jpg" alt="Chemical Dosing System"></div><div class="capability-content"><h4>Chemical Dosing System</h4><p>Skid-mounted dosing systems with corrosion-resistant construction and dosing pump variants including plunger, diaphragm and metering pumps.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l15.jpg" alt="Screening and Aeration"></div><div class="capability-content"><h4>Screening &amp; Aeration</h4><p>Front-end protection and oxidation modules including coarse/fine/grit screening and cascade, spray, diffuser and packed-column aeration systems.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l7.jpg" alt="Dissolved Air Floatation"></div><div class="capability-content"><h4>Dissolved Air Floatation (DAF)</h4><p>Clarification process for removal of oils, grease and suspended contaminants. Includes compact circular DAF and broad industrial application coverage.</p></div></article></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our-news section-margin" id="distribution-automation-systems">
+                    <div class="container">
+                        <div class="one-title capabilities-title" data-dsn-animate="up">
+                            <div class="title-sub-container"><p class="title-sub">PROCESS CATEGORY 02</p></div>
+                            <h2 class="title-main">Automation &amp; Distribution Systems</h2>
+                        </div>
+                        <p class="capabilities-intro" data-dsn-animate="up">Control, monitoring and modular deployment systems that improve reliability, accountability and operating continuity across water networks.</p>
+
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l6.jpg" alt="Fabricated Modular Plants"></div><div class="capability-content"><h4>Fabricated Modular Plants</h4><p>Fast-deployment modular treatment plants with expandable capacity, lower civil dependency and operation-focused scalability for small to medium MLD needs.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l8.jpg" alt="Water Distribution Scheme"></div><div class="capability-content"><h4>Water Distribution Scheme</h4><p>Automation-led storage, pumping and regulated distribution with flow control and pressure balancing for reliable destination-level delivery.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l11.jpg" alt="Flow Monitoring and Metering"></div><div class="capability-content"><h4>Flow Monitoring &amp; Metering</h4><p>Mechanical, ultrasonic and electromagnetic flow systems with AMR/AMI readiness, monitoring, reporting and online accountability features.</p></div></article></div>
+                        </div>
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l16.jpg" alt="Process Automation and Installations"></div><div class="capability-content"><h4>Process Automation &amp; Installations</h4><p>Site-level process automation and integrated field deployment support to sustain uptime, operational visibility and plant reliability.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l17.jpg" alt="Field Services and Support"></div><div class="capability-content"><h4>Field Services &amp; Support</h4><p>Operations, commissioning and maintenance support built for practical performance continuity across treatment and distribution systems.</p></div></article></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our-news section-margin" id="advanced-polishing-sustainability">
+                    <div class="container">
+                        <div class="one-title capabilities-title" data-dsn-animate="up">
+                            <div class="title-sub-container"><p class="title-sub">PROCESS CATEGORY 03</p></div>
+                            <h2 class="title-main">Advanced Polishing &amp; Sustainability</h2>
+                        </div>
+                        <p class="capabilities-intro" data-dsn-animate="up">Final-stage purification and discharge-minimization solutions designed for compliance, reuse quality and long-term environmental performance.</p>
+
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l4.jpg" alt="Online Hydraulic Filter"></div><div class="capability-content"><h4>Online Hydraulic Filter</h4><p>Automated filtration with self-cleaning and differential-pressure-led backwash cycles, including Rapid Sand Filter Modules and Membrane Filtration (RO).</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l9.jpg" alt="Filtration"></div><div class="capability-content"><h4>Filtration</h4><p>Final suspended-solids polishing stage using graded media and pressure sand filter systems engineered for high impurity removal efficiency.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l14.jpg" alt="Disinfection"></div><div class="capability-content"><h4>Disinfection</h4><p>End-stage disinfection options including Electrochlorinator, Ozonation, UV and Gas Chlorinator systems for safe treated water output.</p></div></article></div>
+                        </div>
+                        <div class="row teknoskol-capabilities-grid">
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/placeholder/cespl-l10.jpg" alt="Zero Liquid Discharge"></div><div class="capability-content"><h4>Zero Liquid Discharge</h4><p>Integrated ZLD schemes where wastewater is treated and recycled through complete process loops, minimizing and targeting zero end discharge.</p></div></article></div>
+                        </div>
                     </div>
                 </section>
 

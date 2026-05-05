@@ -179,7 +179,7 @@
             border: 1px solid rgba(14, 143, 37, 0.22);
             border-radius: 18px;
             overflow: hidden;
-            background: linear-gradient(180deg, #f8fff8 0%, #eef8ee 100%);
+            background: #ffffff !important;
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
             transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
         }
@@ -196,7 +196,8 @@
             position: relative;
             overflow: hidden;
             aspect-ratio: 16 / 9;
-            background: #dfeadf;
+            background: #ffffff !important;
+            border-bottom: 2px solid rgba(14, 143, 37, 0.26);
         }
         #extended-process-sections .capability-media::after,
         #distribution-automation-systems .capability-media::after,
@@ -204,7 +205,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(10, 34, 17, 0.05) 0%, rgba(10, 34, 17, 0.32) 100%);
+            background: transparent !important;
             transition: opacity 0.35s ease;
         }
         #extended-process-sections .capability-media img,
@@ -230,6 +231,19 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            background: #ffffff !important;
+            position: relative;
+        }
+        #extended-process-sections .capability-content::before,
+        #distribution-automation-systems .capability-content::before,
+        #advanced-polishing-sustainability .capability-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 24px;
+            right: 24px;
+            height: 1px;
+            background: rgba(14, 143, 37, 0.18);
         }
         #extended-process-sections .capability-content h4,
         #distribution-automation-systems .capability-content h4,

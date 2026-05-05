@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -171,6 +171,12 @@
         #distribution-automation-systems .teknoskol-capabilities-grid,
         #advanced-polishing-sustainability .teknoskol-capabilities-grid {
             row-gap: 30px;
+            margin-bottom: 24px;
+        }
+        #extended-process-sections .teknoskol-capabilities-grid > [class*="col-"],
+        #distribution-automation-systems .teknoskol-capabilities-grid > [class*="col-"],
+        #advanced-polishing-sustainability .teknoskol-capabilities-grid > [class*="col-"] {
+            margin-bottom: 18px;
         }
         #extended-process-sections .capability-card,
         #distribution-automation-systems .capability-card,
@@ -1521,6 +1527,91 @@
             background-color: #000000 !important;
             border-color: #000000 !important;
         }
+        .cespl-cta-copy {
+            display: block;
+            color: rgba(0, 0, 0, 0.78);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .contact-up .c-wapp a {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            grid-template-areas:
+                "hiring career"
+                "hiring copy";
+            column-gap: 56px;
+            row-gap: 8px;
+            align-items: center;
+            justify-items: start;
+            padding: 10px 0;
+        }
+        .contact-up .c-wapp a .hiring {
+            grid-area: hiring;
+            width: 100% !important;
+            margin: 0;
+        }
+        .contact-up .c-wapp a .career {
+            grid-area: career;
+            width: auto !important;
+            margin: 0 !important;
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            text-align: left !important;
+        }
+        .contact-up .c-wapp a .cespl-cta-copy {
+            grid-area: copy;
+            width: 100%;
+            max-width: 560px;
+            margin: 0;
+            text-align: left;
+            font-size: 19px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.86);
+        }
+        .intro-about.section-margin.our-story {
+            margin-top: 72px !important;
+            padding-top: 52px !important;
+        }
+        @media only screen and (max-width: 991px) {
+            .contact-up .c-wapp a {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-areas:
+                    "hiring"
+                    "career"
+                    "copy";
+                row-gap: 10px;
+                padding: 6px 0;
+            }
+            .contact-up .c-wapp a .hiring,
+            .contact-up .c-wapp a .career,
+            .contact-up .c-wapp a .cespl-cta-copy {
+                text-align: center !important;
+                justify-self: center;
+                max-width: 100%;
+            }
+            .contact-up .c-wapp a .career {
+                font-size: 30px;
+            }
+            .contact-up .c-wapp a .cespl-cta-copy {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+        @media only screen and (max-width: 991px) {
+            .intro-about.section-margin.our-story {
+                margin-top: 56px !important;
+                padding-top: 38px !important;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .intro-about.section-margin.our-story {
+                margin-top: 48px !important;
+                padding-top: 32px !important;
+            }
+        }
 
         footer.footer .footer-block .footer-logo {
             width: auto !important;
@@ -2157,7 +2248,7 @@
                         </div>
                         <div class="row teknoskol-capabilities-grid">
                             <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/cespl images/chemical dosing.png" alt="Chemical Dosing System"></div><div class="capability-content"><h4>Chemical Dosing System</h4><p>Skid-mounted dosing systems with corrosion-resistant construction and dosing pump variants including plunger, diaphragm and metering pumps.</p></div></article></div>
-                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/cespl images/screening.png" alt="Screening and Aeration"></div><div class="capability-content"><h4>Screening &amp; Aeration</h4><p>Front-end protection and oxidation modules including coarse/fine/grit screening and cascade, spray, diffuser and packed-column aeration systems.</p></div></article></div>
+                            <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/cespl images/aeration.png" alt="Screening and Aeration"></div><div class="capability-content"><h4>Screening &amp; Aeration</h4><p>Front-end protection and oxidation modules including coarse/fine/grit screening and cascade, spray, diffuser and packed-column aeration systems.</p></div></article></div>
                             <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets/img/cespl images/dfa.png" alt="Dissolved Air Floatation"></div><div class="capability-content"><h4>Dissolved Air Floatation (DAF)</h4><p>Clarification process for removal of oils, grease and suspended contaminants. Includes compact circular DAF and broad industrial application coverage.</p></div></article></div>
                         </div>
                     </div>
@@ -2200,341 +2291,7 @@
                             <div class="col-lg-4 col-md-6"><article class="capability-card" data-dsn-animate="up"><div class="capability-media"><img src="assets\img\cespl images\zeroliquiddischarge.png" alt="Zero Liquid Discharge"></div><div class="capability-content"><h4>Zero Liquid Discharge</h4><p>Integrated ZLD schemes where wastewater is treated and recycled through complete process loops, minimizing and targeting zero end discharge.</p></div></article></div>
                         </div>
                     </div>
-                </section>
-
-
-
-                
-
-                <div class="container slider-project section-margin">
-                    <div class="container">
-                    <div class="one-title" data-dsn-animate="up">
-                        <div class="title-sub-container">
-                            <p class="title-sub">Offerings we provide</p>
-                        </div>
-                        <h2 class="title-main" id="products">Our Solutions</h2>
-                    </div>
-                </div>
-                    
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <!-- Product 1: Single Station Test Rig -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product1.png" alt="Single Station Test Rig" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Valve manufacturers</span>
-                                                <span class="use-case-tag">Oil and gas industries</span>
-                                                <span class="use-case-tag">Power plants</span>
-                                                <span class="use-case-tag">Industrial pipeline systems</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Vertical Hydrostatic Test Stand</h3>
-                                            <p class="product-subtitle">VDM 0050 - Two Pillar Test Stand</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 11.5h14v7.25A1.25 1.25 0 0 1 17.75 20H6.25A1.25 1.25 0 0 1 5 18.75V11.5Zm1.5 0V8.75A5.5 5.5 0 0 1 12 3.25a5.5 5.5 0 0 1 5.5 5.5v2.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Capacity</span>
-                                                        </div>
-                                                        <p class="spec-value spec-value--highlight">50 MT with Sliding Table</p>
-                                                    </div>
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.25h16M6.75 10.5h10.5M8.5 14.75h7M10.25 19h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Application</span>
-                                                        </div>
-                                                        <p class="spec-value">Steam Trap Valve (Flanged &amp; Swend)</p>
-                                                    </div>
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16M8 8.5v7M16 8.5v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Size Range</span>
-                                                        </div>
-                                                        <p class="spec-value spec-value--highlight">1/2&quot; to 6&quot;</p>
-                                                    </div>
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.5v7.25l4.25 2.5M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Test Pressure</span>
-                                                        </div>
-                                                        <p class="spec-value spec-value--highlight">32 to 400 Bar</p>
-                                                    </div>
-                                                    <!-- <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5c3.4 3.3 5.5 6 5.5 9.1A5.5 5.5 0 1 1 6.5 12.6c0-3.1 2.1-5.8 5.5-9.1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Sealing Type</span>
-                                                        </div>
-                                                        <p class="spec-value">Face Sealing</p>
-                                                    </div> -->
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 13.75h5V18h-5v-4.25Zm6 0h5V18h-5v-4.25Zm6 0h5V18h-5v-4.25ZM3.5 7h17v4.25h-17V7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Operation</span>
-                                                        </div>
-                                                        <p class="spec-value">PLC with Proportional Clamping</p>
-                                                    </div>
-                                                    <div class="spec-item">
-                                                        <div class="spec-head">
-                                                            <svg class="spec-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 12h10m0 0-2.75-2.75M17 12l-2.75 2.75M6 5h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                                                            <span class="spec-label">Handling</span>
-                                                        </div>
-                                                        <p class="spec-value">Easy loading &amp; unloading with automated control</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 2: Multi Station Test Rig -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product2.png" alt="Multi Station Test Rig" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Valve manufacturing plants</span>
-                                                <span class="use-case-tag">Large scale industrial production</span>
-                                                <span class="use-case-tag">Pipeline component testing</span>
-                                                <span class="use-case-tag">Industrial quality assurance facilities</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Multi Station Test Rig</h3>
-                                            <p class="product-subtitle">Simultaneous testing architecture for high-volume industrial validation.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Stations</span></div><p class="spec-value spec-value--highlight">Multiple testing stations</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Control</span></div><p class="spec-value">Automated testing control</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure System</span></div><p class="spec-value spec-value--highlight">High pressure hydraulic systems</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Instrumentation</span></div><p class="spec-value">Industrial grade instrumentation</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Scalability</span></div><p class="spec-value">Scalable testing infrastructure</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 3: Torque Rig -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product8.png" alt="Torque Rig" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Valve torque validation</span>
-                                                <span class="use-case-tag">Mechanical component testing</span>
-                                                <span class="use-case-tag">Industrial equipment calibration</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Torque Rig</h3>
-                                            <p class="product-subtitle">Accurate torque validation for valves and mechanical components.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Measurement</span></div><p class="spec-value spec-value--highlight">High precision torque measurement</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Digital monitoring systems</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Platform</span></div><p class="spec-value">Heavy duty mechanical testing platform</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Configuration</span></div><p class="spec-value">Adjustable testing configurations</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 4: Landing Gear Test Rig -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product4.png" alt="Landing Gear Test Rig" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Aerospace component testing</span>
-                                                <span class="use-case-tag">Mechanical load validation</span>
-                                                <span class="use-case-tag">Structural testing environments</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Landing Gear Test Rig</h3>
-                                            <p class="product-subtitle">Simulated landing gear validation for durability and mechanical reliability.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Load Simulation</span></div><p class="spec-value spec-value--highlight">Hydraulic load simulation</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Frame</span></div><p class="spec-value">High strength testing frame</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Digital load monitoring systems</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Compliance</span></div><p class="spec-value">Safety compliant design</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 5: Flanged Valves Test Rig -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product5.png" alt="Flanged Valves Test Rig" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Oil and gas industries</span>
-                                                <span class="use-case-tag">Chemical plants</span>
-                                                <span class="use-case-tag">Industrial pipeline infrastructure</span>
-                                                <span class="use-case-tag">Valve manufacturing plants</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Flanged Valves Test Rig</h3>
-                                            <p class="product-subtitle">Pressure integrity and sealing reliability validation for flanged valves.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure Testing</span></div><p class="spec-value spec-value--highlight">High pressure hydraulic testing</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Sealing</span></div><p class="spec-value">Precision sealing verification</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Chambers</span></div><p class="spec-value">Industrial grade test chambers</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Automated monitoring system</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 6: Loops / Simulations -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product6.png" alt="Loops / Simulations" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Process industry testing</span>
-                                                <span class="use-case-tag">Industrial R&amp;D facilities</span>
-                                                <span class="use-case-tag">Engineering validation environments</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Loops / Simulations</h3>
-                                            <p class="product-subtitle">Real-process simulation systems for controlled validation and monitoring.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Flow Simulation</span></div><p class="spec-value spec-value--highlight">Flow simulation systems</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Pressure Loops</span></div><p class="spec-value">Industrial pressure loops</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Circulation</span></div><p class="spec-value">Fluid circulation testing</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Monitoring</span></div><p class="spec-value">Real time monitoring systems</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 7: Steel Mill Parts -->
-                            <div class="swiper-slide product-slide-featured">
-                                <div class="row">
-                                    <div class="col-md-6 product-image-col">
-                                        <div class="product-image-panel">
-                                            <img src="assets/img/product7.png" alt="Steel Mill Parts" class="img-fluid product-image-animated">
-                                        </div>
-                                        <div class="image-side-usecases">
-                                            <h4 class="info-section-title">Use Cases</h4>
-                                            <div class="use-case-tags">
-                                                <span class="use-case-tag">Steel manufacturing plants</span>
-                                                <span class="use-case-tag">Heavy industrial machinery</span>
-                                                <span class="use-case-tag">Metal processing facilities</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="content-text product-info-modern">
-                                            <h3>Steel Mill Parts</h3>
-                                            <p class="product-subtitle">Precision engineered parts for steel and heavy industrial operations.</p>
-                                            <h4 class="info-section-title">Specifications</h4>
-                                            <div class="product-specs-card">
-                                                <div class="product-specs-grid">
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Components</span></div><p class="spec-value spec-value--highlight">Heavy duty steel components</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Engineering</span></div><p class="spec-value">Custom engineered parts</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Material</span></div><p class="spec-value">High durability industrial materials</p></div>
-                                                    <div class="spec-item"><div class="spec-head"><span class="spec-label">Operating Condition</span></div><p class="spec-value">Designed for extreme industrial conditions</p></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="slider-button-prev">
-                        <div>
-                            <svg viewBox="0 0 40 40">
-                                <polyline class="path" points="23.5 12.5 14.5 20 23.5 27.5"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="slider-button-next">
-                        <div>
-                            <svg viewBox="0 0 40 40">
-                                <polyline class="path" points="16.5 12.5 25.5 20 16.5 27.5"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-
-                
-
-
-
-
-                
-
-
-
-
+                </section>
 
                 <section class="our-work work-under-header industries-section section-margin" data-dsn-col="3">
                     <div class="container">
@@ -2667,7 +2424,7 @@
                 </section>
 
                 <section class="contact-up section-margin section-padding">
-                    <div class="container"><div class="c-wapp"><a href="contact.html" class="effect-ajax"><span class="hiring">Let's create something impactful, together.</span><span class="career">Contact Our Team</span></a></div></div>
+                    <div class="container"><div class="c-wapp"><a href="contact.html" class="effect-ajax"><span class="hiring">Let's create something impactful, together.</span><span class="career">Contact Our Team</span><span class="cespl-cta-copy">Partner with Creintors Environmental Solutions for dependable, compliance-ready water and wastewater systems.</span></a></div></div>
                 </section>
             </div>
             <footer class="footer">
@@ -2989,5 +2746,6 @@
     </script>
 </body>
 </html>
+
 
 

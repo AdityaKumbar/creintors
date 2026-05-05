@@ -1,12 +1,12 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Creintors Teknosol Pvt Ltd - Precision Valve Testing Systems" />
-    <meta name="keyword" content="Creintors Teknosol, valve testing systems, test rigs, industrial reliability" />
-    <title>Creintors Teknosol Pvt Ltd</title>
+    <meta name="description" content="Creintors Environmental Solutions Pvt Ltd - Environmental Engineering Solutions" />
+    <meta name="keyword" content="Creintors Environmental Solutions, water treatment systems, STP, ETP, WTP" />
+    <title>Creintors Environmental Solutions Pvt Ltd</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -1201,10 +1201,10 @@
             background: #ffffff !important;
         }
         #ctpl-vision-mission .ctpl-vm-card .ctpl-vision-title {
-            color: #2796C9 !important;
+            color: #2C9422 !important;
         }
         #ctpl-vision-mission .ctpl-vm-card .ctpl-mission-title {
-            color: #2796C9 !important;
+            color: #2C9422 !important;
         }
         #ctpl-vision-mission .ctpl-vm-pill {
             border-color: rgba(0, 0, 0, 0.24) !important;
@@ -1256,31 +1256,48 @@
             background-color: #ffffff !important;
             border-color: rgba(0, 0, 0, 0.2) !important;
         }
-        /* Match vertical gap rhythm before CTA */
-        .brand-client.section-margin.teknoskol-clients-grid {
+        /* Global section-gap normalization to remove dark bands between blocks */
+        :root {
+            --teknosol-section-gap: 36px;
+        }
+        body,
+        #dsn-scrollbar,
+        main.main-root,
+        main.main-root .wrapper {
+            background-color: #b6d9e8 !important;
+        }
+        main.main-root .wrapper > .section-margin,
+        main.main-root .wrapper > .container.section-margin {
+            margin-top: var(--teknosol-section-gap) !important;
             margin-bottom: 0 !important;
         }
-        .brand-client.section-margin.teknoskol-clients-grid + .contact-up.section-margin {
-            margin-top: 36px !important;
+        main.main-root .wrapper > :first-child.section-margin,
+        main.main-root .wrapper > .container.section-margin:first-child {
+            margin-top: 0 !important;
         }
-        @media only screen and (max-width: 991px) {
-            .brand-client.section-margin.teknoskol-clients-grid + .contact-up.section-margin {
-                margin-top: 24px !important;
-            }
+        .intro-about.our-story + .ctpl-vm-inline.section-margin,
+        .ctpl-vm-inline.section-margin + #capabilities.section-margin,
+        #capabilities.section-margin + .container.slider-project.section-margin,
+        .container.slider-project.section-margin + .brand-client.section-margin.teknoskol-clients-grid,
+        .brand-client.section-margin.teknoskol-clients-grid + .contact-up.section-margin {
+            margin-top: var(--teknosol-section-gap) !important;
         }
 
         .intro-about.our-story + .ctpl-vm-inline.section-margin {
-            margin-top: 72px !important;
+            margin-top: var(--teknosol-section-gap) !important;
         }
 
         .ctpl-vm-inline.section-margin + #capabilities.section-margin {
-            margin-top: 72px !important;
+            margin-top: var(--teknosol-section-gap) !important;
         }
 
         @media only screen and (max-width: 991px) {
+            :root {
+                --teknosol-section-gap: 24px;
+            }
             .intro-about.our-story + .ctpl-vm-inline.section-margin,
             .ctpl-vm-inline.section-margin + #capabilities.section-margin {
-                margin-top: 44px !important;
+                margin-top: var(--teknosol-section-gap) !important;
             }
         }
 
@@ -1604,7 +1621,7 @@
                                 <li><a href="index.html">Creintors - Group of Companies</a></li>
                                 <li><a href="Creintors-Teknoskol-Pvt-Ltd.html">Creintors Teknosol Pvt.Ltd.</a></li>
                                 <li><a href="project-3.html">Creintors Automation & Solutions Pvt.Ltd.</a></li>
-                                <li><a href="project-8.html">Creintors Engineering Services Pvt.Ltd.</a></li>
+                                <li><a href="Creintors-Environmental-Solutions-Pvt-Ltd.html">Creintors Environmental Solutions Pvt.Ltd.</a></li>
                             </ul>
                         </li>
                         <li class="custom-drop-down">
@@ -1669,11 +1686,11 @@
                                     <div class="slide-content-inner">
                                         <div class="title-text-header">
                                             <div class="title-text-header-inner">
-                                                <p class="title-subtitle" style="font-size:25px !important;">Creintors Teknosol Pvt. Ltd.</p>
-                                                <a href="Creintors-Teknoskol-Pvt-Ltd.html">Precision Valve Testing Systems</a>
+                                                <p class="title-subtitle" style="font-size:25px !important;">Creintors Environmental Solutions Pvt. Ltd.</p>
+                                                <a href="Creintors-Environmental-Solutions-Pvt-Ltd.html">Environmental Engineering Solutions</a>
                                             </div>
                                         </div>
-                                        <p class="hero-intro-copy">Creintors Teknosol Pvt. Ltd. designs and manufactures advanced valve testing systems engineered for precision, safety, and reliability. Our testing rigs help industries validate valve performance under real world operating conditions.</p>
+                                        <p class="hero-intro-copy">At Creintors Environmental Solutions we address one of the most pressing industrial responsibilities-water treatment done right. With expertise in Water Treatment Plants, Sewage Treatment Plants, and Effluent Treatment Plants, we deliver reliable, compliant, and efficient systems tailored to real operational needs.</p>
                                         <!-- <div class="link-custom">
                                             <a href="#capabilities" class="image-zoom" data-dsn="parallax">
                                                 <span>Explore Our Capabilities</span>
@@ -1682,8 +1699,8 @@
                                     </div>
                                 </div>
                                 <div class="image-container">
-                                    <div class="image-bg cover-bg" data-dsn-ajax="img" data-image-src="assets/img/homebanner2.jpg" data-overlay="4">
-                                        <img src="assets/img/homebanner2.jpg" alt="Industrial valve testing systems">
+                                    <div class="image-bg cover-bg" data-dsn-ajax="img" data-image-src="assets/img/homebanner4.png" data-overlay="4">
+                                        <img src="assets/img/homebanner4.png" alt="Environmental engineering solutions">
                                     </div>
                                 </div>
                             </div>
@@ -1717,12 +1734,12 @@
                     <div class="container">
                         <div class="one-title" data-dsn-animate="up">
                             <div class="title-sub-container"><p class="title-sub">About Us</p></div>
-                            <h2 class="title-main">Building excellence through precision engineering</h2>
+                            <h2 class="title-main">Building sustainability through environmental engineering</h2>
                         </div>
                         <div class="inner">
                             <div class="row align-items-center about-intro-row">
                                 <div class="col-lg-7 about-intro-text">
-                                    <p class="about-intro-copy" data-dsn-animate="up">Creintors Teknosol engineers high-performance test rigs and validation systems built for precision and reliability. From hydrostatic rigs to electronic control and diagnostic benches, we support automotive, electrical, fluid-power, and R&amp;D applications. With in-house design, automation, and data integration, we deliver smarter testing systems that help teams validate faster and operate with confidence.</p>
+                                    <p class="about-intro-copy" data-dsn-animate="up">Creintors Environmental Solutions designs and delivers treatment systems built for real-world operating demands. From water and wastewater treatment to effluent compliance and process optimization, we help industries meet environmental standards with reliable and efficient engineering.</p>
                                 </div>
                                 <div class="col-lg-5 mt-4 mt-lg-0 about-intro-visual">
                                     <div class="about-rig-card image-zoom" data-dsn="parallax" data-dsn-animate="up">
@@ -1746,19 +1763,19 @@
                             <div class="title-sub-container"><p class="title-sub">Our Core Direction</p></div>
                             <h2 class="title-main">Vision & Mission</h2>
                         </div>
-                        <p class="vm-inline-subcopy" data-dsn-animate="up">Creintors Teknosol's purpose is rooted in dependable testing standards and trust-building engineering outcomes for every application we serve.</p>
+                        <p class="vm-inline-subcopy" data-dsn-animate="up">Creintors Environmental Solutions' purpose is rooted in dependable treatment standards and trust-building environmental outcomes for every facility we serve.</p>
 
                         <div class="row">
                             <div class="col-lg-6 mb-4">
                                 <article class="ctpl-vm-card">
-                                    <span class="ctpl-vm-pill">CTPL Vision</span>
+                                    <span class="ctpl-vm-pill">CEPL Vision</span>
                                     <h4 class="ctpl-vision-title">Vision</h4>
-                                    <p>To be a trusted partner for delivering unique testing solutions for various applications as per the established standards and also be a part of an ecosystem that defines these standards.</p>
+                                    <p>To be a trusted partner in delivering sustainable environmental solutions that support industries in meeting compliance, conserving resources, and improving operational reliability.</p>
                                 </article>
                             </div>
                             <div class="col-lg-6 mb-4">
                                 <article class="ctpl-vm-card">
-                                    <span class="ctpl-vm-pill">CTPL Mission</span>
+                                    <span class="ctpl-vm-pill">CEPL Mission</span>
                                     <h4 class="ctpl-mission-title">Mission</h4>
                                     <p>Through the culture of innovation and collaboration of people and technologies, building an ecosystem of offerings, that deliver testing facilities for encouraging every product and service provider, to test its offerings for its very purpose and thus building the trust and confidence in every end user.</p>
                                 </article>
@@ -1859,7 +1876,7 @@
                         <div class="title-sub-container">
                             <p class="title-sub">Offerings we provide</p>
                         </div>
-                        <h2 class="title-main" id="products">Our Products</h2>
+                        <h2 class="title-main" id="products">Our Solutions</h2>
                     </div>
                 </div>
                     
@@ -2491,3 +2508,5 @@
     </script>
 </body>
 </html>
+
+
